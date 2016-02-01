@@ -1,0 +1,80 @@
+User Input: Additional Resources
+
+PDFs of Presentations
+
+3-Bootstrap-Forms.pdf
+2-Bootstrap-Buttons.pdf
+1-User-Input.pdf
+
+
+Exercise Resources
+
+contactus.html (https://spark-public.s3.amazonaws.com/phoenixassets/web-frameworks/contactus.html)
+
+
+
+Bootstrap Resources
+
+Bootstrap Buttons (http://getbootstrap.com/css/#buttons)
+Bootstrap Button Groups (http://getbootstrap.com/components/#btn-groups)
+Bootstrap Forms (http://getbootstrap.com/css/#forms)
+
+
+
+
+Other Useful Resources
+
+The Difference Between Anchors, Inputs and Buttons (Semantic differences in the usage) (https://davidwalsh.name/html5-buttons)
+When To Use The Button Element (The multifaceted button element) (https://css-tricks.com/use-button-element
+
+
+
+
+Displaying Content: Additional Resources
+
+PDFs of Presentations
+
+5-Bootstrap-Panels-Wells.pdf
+4-Bootstrap-Tables.pdf
+
+
+Bootstrap Classes
+
+Bootstrap Tables (http://getbootstrap.com/css/#tables)
+Bootstrap Panels (http://getbootstrap.com/components/#panels)
+Bootstrap Wells (http://getbootstrap.com/components/#wells)
+Bootstrap Blockquote (http://getbootstrap.com/css/#type-blockquotes)
+
+
+
+
+PDFs of Presentations
+
+6-Images-Media.pdf
+
+Exercise Resources
+
+img.zip (download this to conFusion, unzip it to create an "img" folder there) (https://eventing.coursera.org/api/redirectStrict/vSgKF0gfLj_8JLiqh242E9smj4_8E48M_sPe6TGiEKmF1Oy-AE3N_ee3uugwmEBbD-i41cCcFArQpRdXlWpWZg.EH6I9FavXkGMKTfqo4tWEA.KTr1Ivj69UZ5y-qNe0Tlj1sosZ2nlfBch5qONKu3nUJj1VZWMV0OtM-6IlRAnLKbZz3v3vi2BMsqfi9gEG-RX0DimR0qB_ErE1fvo8rv5FDd_CNjXxxe1U7FWoMNrR8FsZO3ZGMFjnz8HWO4uWvgQXZVd0E4vOGBFpXM_Q8H2nXDwZLaAvKsxgJUMwsT1XcEOccqCdnsBQZSbtwfnsUd5H2fhth6A9qmvbN0WoaA89QZlcj_1p6z423zHZXon9QJWXFowmSmTiHYkrEtDE-JRC_GFYZeKRtySAaWUeyZuqG9WpyRaq_LxcDOYs-H3MxdcdrF9lvAEF8D-_gD10cGUnYsLCuWnEMrMGejNFUoI6hR0cXw682PZKqVMq62sHm_YctSKvwEQzMD7ozSchn7cA)
+
+
+Bootstrap Resources
+
+Bootstrap Image Classes (http://getbootstrap.com/css/#images)
+Bootstrap Thumbnail Classes (http://getbootstrap.com/components/#thumbnails)
+Bootstrap Media Object Classes (http://getbootstrap.com/components/#media)
+Bootstrap Responsive Embed Classes (http://getbootstrap.com/components/#responsive-embed)
+
+
+
+
+PDFs of Presentations
+
+7-Alerting-Users.pdf
+
+
+Bootstrap Resources
+
+Bootstrap Labels (http://getbootstrap.com/components/#labels)
+Bootstrap Badges (http://getbootstrap.com/components/#badges)
+Bootstrap Alerts (http://getbootstrap.com/components/#alerts)
+Bootstrap Progress Bars (http://getbootstrap.com/components/#progress)

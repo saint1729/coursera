@@ -1,0 +1,57 @@
+PDFs of Presentations
+
+7-Icon Fonts.pdf
+6-Navbar.pdf
+5-Navigation.pdf
+
+
+Exercise Resources
+
+bootstrap-social.css (required for the exercise) (https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/bootstrap-social.css)
+
+
+Official Bootstrap Resources
+
+Navbar (http://getbootstrap.com/components/#navbar)
+Breadcrumbs (http://getbootstrap.com/components/#breadcrumbs)
+
+
+General
+
+Accessible Rich Internet Applications (ARIA) (Accessibility support and screen reader support) (https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
+
+
+
+Information Architecture
+
+Information Architecture 101: Techniques and Best Practices (Quick introduction to Information architecture with respect to website design) (http://sixrevisions.com/usabilityaccessibility/information-architecture-101-techniques-and-best-practices/)
+Web Site Information Architecture models (Another good resource on information architecture) (http://webdesignfromscratch.com/website-architecture/ia-models/)
+What is information architecture? (Good definition and explanation about the topic) (http://www.steptwo.com.au/papers/kmc_whatisinfoarch/)
+Information Architecture Tutorial (Comprehensive look from a website design perspective) (http://www.webmonkey.com/2010/02/Information_Architecture_Tutorial/)
+
+
+
+Navigation Bar Design
+
+Designing A Winning Navigation Menu: Ideas and Inspirations (Good suggestions on how to design navigation for a website) (http://www.hongkiat.com/blog/navigation-design-ideas-inspiration/)
+Are You Making These Common Website Navigation Mistakes? (Worth reading at least to learn what not to do) (https://blog.kissmetrics.com/common-website-navigation-mistakes/)
+3 Reasons We Should Stop Using Navigation Bars (A provocative view on navigation bars) (http://www.webdesignerdepot.com/2014/01/3-reasons-we-should-stop-using-navigation-bars/)
+
+
+
+Breadcrumbs
+
+Breadcrumb Navigation Examined: Best Practices & Examples (Great suggestions on using breadcrumbs for navigation) (http://www.hongkiat.com/blog/breadcrumb-navigation-examined-best-practices-examples/)
+Breadcrumb Navigation: A Guide On Types, Benefits And Best Practices (Another great resource on types and usage of breadcrumbs) (http://blog.woorank.com/2014/11/breadcrumb-navigation-guide/)
+
+
+
+Icon Fonts
+
+Why And How To Use Icon Fonts (a good overview of icon fonts) (http://vanseodesign.com/web-design/icon-fonts/)
+Icon Fonts are Awesome (another good introduction to icon fonts) (https://css-tricks.com/examples/IconFont/)
+FontAwesome (one of the most popular icon fonts) (https://fortawesome.github.io/Font-Awesome/)
+Get started with FontAwesome (good official help) (https://fortawesome.github.io/Font-Awesome/get-started/)
+Bootstrap-Social (http://lipis.github.io/bootstrap-social/)
+The Final Nail in the Icon Fonts Coffin? (a controversial opinion piece on icon fonts) (http://www.sitepoint.com/final-nail-icon-fonts-coffin/)
+Using SVGs (alternative to icon fonts) (http://gomakethings.com/using-svgs/)

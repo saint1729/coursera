@@ -1,0 +1,20 @@
+Bootstrap and JQuery: Additional Resources
+
+PDFs of Presentations
+
+1-Bootstrap-JQuery.pdf
+
+
+Bootstrap Resources
+
+Bootstrap Carousel Methods (http://getbootstrap.com/javascript/#carousel-methods)
+
+
+JQuery
+
+JQuery (http://jquery.com/)
+W3Schools JQuery (http://www.w3schools.com/jquery/default.asp)
+
+
+
+

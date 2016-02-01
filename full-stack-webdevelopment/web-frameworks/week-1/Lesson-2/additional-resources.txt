@@ -1,0 +1,18 @@
+Introduction to Bootstrap: Additional Resources
+
+PDFs of the Presentations
+
+1-Web-UI-Frameworks.pdf
+2-Getting-Started-Bootstrap.pdf
+Exercise Resources
+
+index.html (required for the exercise) (https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/index.html)
+index.html
+Bootstrap Official Resources
+
+Bootstrap Home Page (http://getbootstrap.com/)
+Bootstrap typography (http://getbootstrap.com/css/#type)
+Front-end Frameworks
+
+The 5 Most Popular Frontend Frameworks of 2014 Compared (a recent opinion piece comparing the most popular front-end UI frameworks) (http://www.sitepoint.com/5-most-popular-frontend-frameworks-compared/)
+Front-end Frameworks v2.5 (http://usablica.github.io/front-end-frameworks/) and comparison (http://usablica.github.io/front-end-frameworks/compare.html) (yet another recent comparison of front-end frameworks)

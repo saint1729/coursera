@@ -1,0 +1,22 @@
+Responsive Design and Bootstrap Grid System: Additional Resources
+
+
+PDFs of Presentations
+
+3-Responsive-Design.pdf
+4-Bootstrap-Grid.pdf
+
+
+
+Bootstrap Official Documentation
+
+Bootstrap Grid System (http://getbootstrap.com/css/#grid)
+
+
+
+Responsive Design
+
+The Subtle Magic Behind Why the Bootstrap 3 Grid Works (a detailed explanation of why the Bootstrap grid system works the way it does, a delight to read!) (http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works)
+What The Heck Is Responsive Web Design? (a short presentation that introduces responsive web design) (http://johnpolacek.github.io/scrolldeck.js/decks/responsive/)
+Beginner’s Guide to Responsive Web Design (simple introduction to responsive web design) (http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design)
+The 2014 Guide to Responsive Web Design (an updated guide to responsive design) (http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design)

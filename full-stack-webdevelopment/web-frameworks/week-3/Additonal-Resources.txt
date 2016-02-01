@@ -1,0 +1,59 @@
+Bootstrap JavaScript Components: Additional Resources
+
+PDFs of Presentations
+
+1-Bootstrap JS.pdf
+
+
+Bootstrap Resources
+
+Bootstrap and JavaScript (http://getbootstrap.com/javascript/)
+Bootstrap JS Data Attributes (http://getbootstrap.com/javascript/#js-data-attrs)
+
+
+
+PDFs of Presentations
+
+2-Tabs-Pills-Navigation.pdf
+
+Bootstrap Resources
+
+Bootstrap Navs (http://getbootstrap.com/components/#nav)
+Bootstrap Tabs (http://getbootstrap.com/components/#nav-tabs)
+Bootstrap Pills (http://getbootstrap.com/components/#nav-pills)
+Bootstrap Togglable Tabs Javascript plugin (http://getbootstrap.com/javascript/#tabs)
+
+
+PDFs of Presentations
+
+4-Scrollspy-Affix.pdf
+3-Collapse.pdf
+
+Bootstrap Resources
+
+Bootstrap Collapse Plugin (http://getbootstrap.com/javascript/#collapse)
+Bootstrap Accordion (http://getbootstrap.com/javascript/#collapse-example-accordion)
+Bootstrap Scrollspy (http://getbootstrap.com/javascript/#scrollspy)
+Bootstrap Affix (http://getbootstrap.com/javascript/#affix)
+
+
+
+PDFs of Presentations
+
+5-Tooltips-Popovers-Modals.pdf
+
+Bootstrap Resources
+
+Bootstrap Tooltips (http://getbootstrap.com/javascript/#tooltips)
+Bootstrap Popovers (http://getbootstrap.com/javascript/#popovers)
+Bootstrap Modals (http://getbootstrap.com/javascript/#modals)
+
+
+
+PDFs of Presentations
+
+6-Carousel.pdf
+
+Bootstrap Resources
+
+Bootstrap Carousel (http://getbootstrap.com/javascript/#carousel)
