@@ -1,0 +1,9 @@
+Now that you have compled this module, you have a deep understanding of JavaScript. W3School JavaScript Tutorial is a good place to fill in any 'missing gaps' from your knowledge.
+
+If you want to improve your coding style with JavaScript, you may be interested in this: W3School JavaScript Style Guide and Coding Conventions
+
+If you would like more practice on JavaScript programming, you can try these:
+
+JavaScript Exercises http://www.billpegram.com/Javascript/javascript_exercises.html
+JavaScript Exercises for Beginners http://www.jsexercises.com/ . Select a topic by clicking on the table of contents shown on the left. Solution code is included.
+If you want to see a complete reference of JavaScript, you can read this: W3School JavaScript Reference

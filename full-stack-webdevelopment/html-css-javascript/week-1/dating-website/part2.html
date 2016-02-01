@@ -1,0 +1,106 @@
+<Doctype html>
+<html>
+    <head>
+        <style>
+            .fieldset {
+                background: lightyellow;
+                border: 10px solid yellow;
+                margin-bottom: 10px;
+                width: 720px;
+            }
+            .label {
+                width: 180px;
+                display: inline-block;
+                text-align: right;
+                text-align: top;
+            }
+            .groups {
+                width: auto;
+            }
+            .slider-left {
+                text-align: center;
+                background: red;
+                background-width: 50px;
+            }
+            .slider-right {
+                text-align: center;
+                background: green;
+                background-width: 50px;
+            }
+            .address {
+                width: 360px;
+                height: 50px;
+            }
+            table {
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="post" enctype="multipart/form-data" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+            <fieldset class="fieldset">
+                <legend>Your Face</legend>
+                <label class="label" for="avatar">Your image:</label> <input type="file" id="avatar" name="avatar" required> <br><br>
+                <label class="label" for="preview">Image preview:</label> <br>
+            </fieldset> <br>
+            <fieldset class="fieldset">
+                <legend>Your General Details</legend>
+                <label class="label" for="fullName">Name:</label> <input type="text" id="fullName" name="fullName" placeholder="Your full name" required><br><br>
+                <label class="label" for="gender">Gender:</label> <input type="radio" class="groups" id="gender" name="gender" value="male" required>Male <input type="radio" class="groups" name="gender" value="female" required>Female<br><br>
+                <label class="label" for="age">Age:</label> <input type="number" id="age" name="age" value="18" required><br><br>
+                <label class="label" for="birthday">Date of birth:</label> <input type="date" id="birthday" name="birthday"><br><br>
+                <label class="label" for="color">Favorite color:</label> <input type="color" id="color" name="color"><br><br>
+                <label class="label" for="country">Which country:</label>
+                <select id="country" name="country">
+                    <option value=""></option>
+                    <option value="us">United States</option>
+                    <option value="jp">Japan</option>
+                    <option value="ch">China</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="in">India</option>
+                </select>
+            </fieldset> <br>
+            <fieldset class="fieldset">
+                <legend>Your Indicators</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="label" for="height">Height:</label>
+                        </td>
+                        <td class="slider-left">
+                            Short
+                        </td>
+                        <td>
+                            <input type="range" min="0" max="100" step="5" value="50" name="height">
+                        </td>
+                        <td class="slider-right">
+                            Tall
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="label" for="salary">Salary:</label>
+                        </td>
+                        <td class="slider-left">
+                            Poor
+                        </td>
+                        <td>
+                            <input type="range" min="0" max="100" step="5" value="50" class="slider" name="salary">
+                        </td>
+                        <td  class="slider-right">
+                            Rich
+                        </td>
+                    </tr>
+                </table>
+            </fieldset><br>
+            <fieldset class="fieldset">
+                <legend>Your Contact Information</legend>
+                <label class="label" for="email">Email:</label> <input id="email" name="email" type="email" required> <br><br>
+                <label class="label" for="mobile">Mobile:</label> <input id="mobile" name="mobile" type="tel"> <br><br>
+                <label class="label" for="address">Address:</label> <textarea class="address" id="address"></textarea> <br>
+                <label class="label" for="contact">Method to contact you:</label> <input type="checkbox" class="groups" name="contact" value="email">Email <input type="checkbox" class="groups" name="contact" value="whatsApp">WhatsApp <input type="checkbox" class="groups" name="contact" value="inAppChat">In-app chat<br>
+            </fieldset><br>
+            <input type="submit" value="Submit!">
+        </form>
+    </body>
+</html>

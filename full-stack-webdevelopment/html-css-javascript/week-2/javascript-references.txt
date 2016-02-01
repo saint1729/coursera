@@ -1,0 +1,9 @@
+Now that you have compled this module, you have a basic understanding of JavaScript. In the next module, you will deepen your understanding further. If you want to have greater appreciation of the topics before moving on to the next module, this is a good place to do that: W3School JavaScript Tutorial
+
+If you want to improve your coding style with JavaScript, you may be interested in this: W3School JavaScript Style Guide and Coding Conventions
+
+If you would like more practice on JavaScript programming, you can try these:
+
+JavaScript exercises http://www.ugrad.cs.ubc.ca/~cs101/2013W2/practice-questions/prejavascriptartlab/
+JavaScript Exercises http://www.billpegram.com/Javascript/javascript_exercises.html
+JavaScript Exercises for Beginners http://www.jsexercises.com/ . Select a topic by clicking on the table of contents shown on the left. Solution code is included.

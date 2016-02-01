@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+    <head>
+        <style>
+            .image {
+                position:absolute;
+            }
+            .divs {
+                position:absolute;
+                width:500px;
+                height:500px;
+            }
+            #rightSide {
+                left: 500px;
+                border-left: 1px solid black;
+            }
+        </style>
+
+        <script type="text/javascript">
+            var numberOfFaces = 5;
+            var theLeftSide = document.getElementById("leftSide");
+            var theRightSide = document.getElementById("rightSide");
+            var leftSideImages;
+
+            function generateFaces() {
+                imgs = []
+                for (var i = 0; i < numberOfFaces; i++) {
+                    var img = document.createElement("img");
+                    img.src = "http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+                    img.style.position = "absolute";
+                    img.style.top = Math.floor(Math.random()*400)+"px";
+                    img.style.left = Math.floor(Math.random()*400)+"px";
+                    leftSide.appendChild(img);
+                    imgs.push(img);
+                }
+                leftSideImages = leftSide.cloneNode(true);
+                leftSideImages.removeChild(leftSideImages.lastChild);
+                rightSide.appendChild(leftSideImages);
+            }
+
+        </script>
+
+    </head>
+
+    <body id="myBody" onload="generateFaces()">
+        <h1>Matching game!</h1>
+        <p>Click on the missing smiley to score more.</p>
+        <div class="divs" id="leftSide"></div>
+        <div class="divs" id="rightSide"></div>
+    </body>
+
+</html>
