@@ -18,3 +18,53 @@ W3Schools JQuery (http://www.w3schools.com/jquery/default.asp)
 
 
 
+Node.js and NPM: Additional Resources
+
+PDFs of Presentations
+
+2-Nodejs.pdf
+
+
+Node and NPM
+
+Nodejs.org (https://nodejs.org/en/)
+Npmjs.com (https://www.npmjs.com/)
+Node API Documentation (https://nodejs.org/api/)
+NPM Documentation (https://docs.npmjs.com/)
+
+
+
+CSS Preprocessors: Additional Resources
+
+PDFs of Presentations
+
+3-CSS-Preprocessors.pdf
+
+Less and Sass Resources
+
+Less Getting Started (http://lesscss.org/)
+Sass Basics (http://sass-lang.com/guide)
+Getting Started with Less Tutorial (https://scotch.io/tutorials/getting-started-with-less)
+Getting Started with Sass Tutorial (https://scotch.io/tutorials/getting-started-with-sass)
+
+
+
+Web Tools: Bower: Additional Resources
+
+PDFs of Presentations
+
+4-Bower.pdf
+
+Bower Related Information
+
+Bower Website (http://bower.io/)
+Bower 101 (https://medium.com/@ZaidHanania/bower-101-c0b57322df8)
+Node, Grunt, Bower and Yeoman - A Modern web dev's Toolkit (http://juristr.com/blog/2014/08/node-grunt-yeoman-bower/)
+
+
+
+Assignment 4: Additional Resources
+
+Bootstrap Resources
+
+Bootstrap Modal Methods (http://getbootstrap.com/javascript/#modals-methods)
