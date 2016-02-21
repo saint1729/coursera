@@ -18,3 +18,37 @@ What is the 3-Tier Architecture? (http://www.tonymarston.net/php-mysql/3-tier-ar
 
 
 
+Introduction to AngularJS: Additional Resources
+
+Exercise Resources
+conFusion.zip
+
+PDFs of Presentations
+1-JavaScript-Frameworks.pdf
+2-Intro-AngularJS.pdf
+
+Angular Resources
+Angular Official Website
+Angular Documentation
+What is AngularJS?
+Angular Data Binding
+Angular Directives: ng-app, ng-init, ng-model, ng-repeat
+Definitions
+
+Framework
+Hollywood Principle
+Inversion of Control
+Imperative vs Declarative Programming
+Imperative vs Declarative
+Blog Articles
+
+Most Popular JavaScript Frameworks 2015
+JavaScript Frameworks: The Best 10 for Modern Web Apps
+A JS framework on every tableA JS framework on every table (an interesting viewpoint on JavaScript frameworks)
+Choosing the right JavaScript framework for the job
+Should You Use a JavaScript MVC Framework to Build Your Web Application?
+Comparison of 4 popular JavaScript MV* frameworks (part 1)
+AngularJS Critique (a critical view of AngularJS, take it with a grain of salt)
+Why you should not use AngularJS (another viewpoint on Angular, take it with a rock of salt, grains are too tiny)
+Declarative vs. Imperative Programming for the Web
+Meteor vs Angular
