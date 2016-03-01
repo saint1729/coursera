@@ -52,3 +52,19 @@ AngularJS Critique (a critical view of AngularJS, take it with a grain of salt)
 Why you should not use AngularJS (another viewpoint on Angular, take it with a rock of salt, grains are too tiny)
 Declarative vs. Imperative Programming for the Web
 Meteor vs Angular
+
+
+
+
+Assignment 1: Additional Resources
+
+Assignment 1 Files
+
+dishdetail.html
+
+Other Related Resources
+
+Bootstrap Media Object (http://getbootstrap.com/components/#media)
+Bootstrap Blockquote (http://getbootstrap.com/css/#type-blockquotes)
+Angular Date Filter (https://docs.angularjs.org/api/ng/filter/date)
+Angular orderBy Filter (https://docs.angularjs.org/api/ng/filter/orderBy)
