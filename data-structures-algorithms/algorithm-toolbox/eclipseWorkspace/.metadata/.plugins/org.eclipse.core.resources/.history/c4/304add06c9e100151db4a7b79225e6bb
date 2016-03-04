@@ -1,0 +1,22 @@
+package week_2.lcm;
+
+import java.util.*;
+
+public class LCM {
+  private static Scanner scanner;
+
+private static long lcm(int a, int b) {
+    
+    long lcm, gcd;
+
+    return a * b;
+  }
+
+  public static void main(String args[]) {
+    scanner = new Scanner(System.in);
+    int a = scanner.nextInt();
+    int b = scanner.nextInt();
+
+    System.out.println(lcm(a, b));
+  }
+}
