@@ -3,8 +3,8 @@
 	<section name="FileSystemImportWizard">
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="-1" key="dialogWidth"/>
-		<item value="-1" key="dialogHeight"/>
+		<item value="350" key="dialogWidth"/>
+		<item value="250" key="dialogHeight"/>
 		<list key="orderedProviders">
 		</list>
 		<list key="textArray">

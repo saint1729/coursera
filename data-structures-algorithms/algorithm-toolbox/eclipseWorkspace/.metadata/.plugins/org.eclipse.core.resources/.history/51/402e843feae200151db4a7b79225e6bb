@@ -22,13 +22,13 @@ public class FibonacciHuge {
     }
     
     private static long getFibonacciHuge(long n, long m) {
-
+        
         if (n <= 1)
             return n;
-
+      
         int i = 1;
         long a = 0, b = 1, c = (a+b)%m;
-
+          
         while(i < n) {
             c = (a+b)%m;
             a = b;
@@ -39,7 +39,9 @@ public class FibonacciHuge {
         return c;
 
     }
-        
+    
+
+    
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
         long n = scanner.nextLong();
@@ -47,5 +49,6 @@ public class FibonacciHuge {
         
         System.out.println(getFibonacciHuge(n%pi(m), m));
     }
+    
 }
 
