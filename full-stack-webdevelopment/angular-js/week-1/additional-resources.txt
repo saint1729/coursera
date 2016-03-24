@@ -28,20 +28,24 @@ PDFs of Presentations
 2-Intro-AngularJS.pdf
 
 Angular Resources
-Angular Official Website
-Angular Documentation
-What is AngularJS?
-Angular Data Binding
-Angular Directives: ng-app, ng-init, ng-model, ng-repeat
+
+Angular Official Website (https://angularjs.org/)
+Angular Documentation (https://docs.angularjs.org/guide)
+What is AngularJS? (https://docs.angularjs.org/guide/introduction)
+Angular Data Binding (https://docs.angularjs.org/guide/databinding)
+Angular Directives: ng-app (https://docs.angularjs.org/api/ng/directive/ngApp), ng-init (https://docs.angularjs.org/api/ng/directive/ngInit), ng-model (https://docs.angularjs.org/api/ng/directive/ngModel), ng-repeat (https://docs.angularjs.org/api/ng/directive/ngRepeat)
+
 Definitions
 
-Framework
-Hollywood Principle
-Inversion of Control
-Imperative vs Declarative Programming
-Imperative vs Declarative
+Framework (https://en.wikipedia.org/wiki/Software_framework)
+Hollywood Principle (https://en.wikipedia.org/wiki/Hollywood_principle)
+Inversion of Control (https://en.wikipedia.org/wiki/Inversion_of_control)
+Imperative vs Declarative Programming (https://www.netguru.co/blog/imperative-vs-declarative)
+
 Blog Articles
 
+<<<<<<< HEAD
+<<<<<<< bd91f9fefc5e0f77002f1c0af7d53efbae05f331
 Most Popular JavaScript Frameworks 2015
 JavaScript Frameworks: The Best 10 for Modern Web Apps
 A JS framework on every tableA JS framework on every table (an interesting viewpoint on JavaScript frameworks)
@@ -52,10 +56,29 @@ AngularJS Critique (a critical view of AngularJS, take it with a grain of salt)
 Why you should not use AngularJS (another viewpoint on Angular, take it with a rock of salt, grains are too tiny)
 Declarative vs. Imperative Programming for the Web
 Meteor vs Angular
+=======
+=======
+>>>>>>> bf556bcf1ce879b7e7282717377687e9933f35a2
+Most Popular JavaScript Frameworks 2015 (http://www.improgrammer.net/most-popular-javascript-frameworks-2015/)
+JavaScript Frameworks: The Best 10 for Modern Web Apps (http://noeticforce.com/best-Javascript-frameworks-for-single-page-modern-web-applications)
+A JS framework on every tableA JS framework on every table (an interesting viewpoint on JavaScript frameworks) (http://www.allenpike.com/2015/javascript-framework-fatigue/)
+Choosing the right JavaScript framework for the job (https://www.lullabot.com/articles/choosing-the-right-javascript-framework-for-the-job)
+Should You Use a JavaScript MVC Framework to Build Your Web Application? (https://www.codementor.io/javascript/tutorial/should-you-build-your-web-application-with-javascript-mvc-frameworks)
+Comparison of 4 popular JavaScript MV* frameworks (part 1) (http://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks/)
+AngularJS Critique (a critical view of AngularJS, take it with a grain of salt) (http://tutorials.jenkov.com/angularjs/critique.html)
+Why you should not use AngularJS (another viewpoint on Angular, take it with a rock of salt, grains are too tiny) (https://medium.com/@mnemon1ck/why-you-should-not-use-angularjs-1df5ddf6fc99#.fttfc53ju)
+Declarative vs. Imperative Programming for the Web (http://codenugget.co/2015/03/05/declarative-vs-imperative-programming-web.html)
+Meteor vs Angular (http://blog.differential.com/meteor-vs-angular/)
+<<<<<<< HEAD
+>>>>>>> completed angular-js week-1 assignment
+=======
+>>>>>>> bf556bcf1ce879b7e7282717377687e9933f35a2
 
 
 
 
+<<<<<<< HEAD
+<<<<<<< bd91f9fefc5e0f77002f1c0af7d53efbae05f331
 Assignment 1: Additional Resources
 
 Assignment 1 Files
@@ -68,3 +91,49 @@ Bootstrap Media Object (http://getbootstrap.com/components/#media)
 Bootstrap Blockquote (http://getbootstrap.com/css/#type-blockquotes)
 Angular Date Filter (https://docs.angularjs.org/api/ng/filter/date)
 Angular orderBy Filter (https://docs.angularjs.org/api/ng/filter/orderBy)
+=======
+=======
+>>>>>>> bf556bcf1ce879b7e7282717377687e9933f35a2
+The Model View Controller Framework: Additional Resources
+
+Angular Resources
+
+Angular Concepts (https://docs.angularjs.org/guide/concepts)
+Angular Module (https://docs.angularjs.org/guide/module)
+Angular Controllers (https://docs.angularjs.org/guide/controller)
+
+PDFs of Presentations
+
+3-MVC.pdf
+4-Angular-Modules-Controllers.pdf
+
+Additional Resources
+
+Software design pattern (https://en.wikipedia.org/wiki/Software_design_pattern)
+Model–view–controller (https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+Model-View-ViewModel (https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+Model-View-Whatever (http://www.beyondjava.net/blog/model-view-whatever/)
+Design Patterns: Elements of Reusable Object-Oriented Software (http://c2.com/cgi/wiki?DesignPatternsBook)
+Web Application (https://en.wikipedia.org/wiki/Web_application)
+
+
+
+
+Angular Filters: Additional Resources
+
+Angular Documentation
+
+List of Angular Built-in Filters (https://docs.angularjs.org/api/ng/filter)
+Currency Filter (https://docs.angularjs.org/api/ng/filter/currency)
+Date Filter (https://docs.angularjs.org/api/ng/filter/date)
+Filter (https://docs.angularjs.org/api/ng/filter/filter)
+OrderBy Filter (https://docs.angularjs.org/api/ng/filter/orderBy)
+
+PDFs of Presentations
+
+<<<<<<< HEAD
+5-Angular-Filters.pdf
+>>>>>>> completed angular-js week-1 assignment
+=======
+5-Angular-Filters.pdf
+>>>>>>> bf556bcf1ce879b7e7282717377687e9933f35a2
