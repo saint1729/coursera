@@ -1,0 +1,48 @@
+package week_5.primitive_calculator;
+
+import java.util.*;
+
+public class PrimitiveCalculator {
+    private static Scanner scanner;
+
+    private static List<Integer> optimal_sequence(int n) {
+        List<Integer> sequence = new ArrayList<Integer>();
+        while (n >= 1) {
+            sequence.add(n);
+            if (n % 3 == 0) {
+                n /= 3;
+            } else if (n % 2 == 0) {
+                n /= 2;
+            } else {
+                n -= 1;
+            }
+        }
+        Collections.reverse(sequence);
+        return sequence;
+    }
+
+    private static List<Integer> DPChange(int n) {
+        List<Integer> sequence = new ArrayList<Integer>(n);
+        sequence.set(0, 0);
+        sequence.set(1, 1);
+        sequence.set(2, 1);
+        sequence.set(3, 1);
+        for(int i = 0; i < n; i++) {
+            sequeuence
+        }
+        Collections.reverse(sequence);
+        return sequence;
+    }
+
+    public static void main(String[] args) {
+        scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        
+        List<Integer> sequence = optimal_sequence(n);
+        System.out.println(sequence.size() - 1);
+        for (Integer x : sequence) {
+            System.out.print(x + " ");
+        }
+    }
+}
+
