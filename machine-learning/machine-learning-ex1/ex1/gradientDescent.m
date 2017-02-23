@@ -17,10 +17,10 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
-	h = X*theta;
-	error = (h-y);
-	dTheta = alpha*1/m*X'*error;
-	theta = theta-dTheta;
+    h = X*theta;
+    error = (h-y);
+    dTheta = alpha*1/m*X'*error;
+    theta = theta-dTheta;
 	
     % ============================================================
 
