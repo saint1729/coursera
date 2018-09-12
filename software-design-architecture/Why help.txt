@@ -1,0 +1,16 @@
+Myself, Sai Nikhil and I work as a full time employee at Oracle IDC, Hyderabad and as part of my work I am involved in development of an ERP software based on Java and J2EE technologies. I completed my undergraduate education in Civil Engineering in May 2013 from a reputed instituion in India, Indian Institute of Technology - Kharagpur (IIT Kharagpur). Right from my childhood, my major interest is in subject of mathematics which steered my interest towards learning Data Structure and Algorithms course. I started my career as an R&D Engineer at Altair Engineering (Kindly, refer to my personal website http://saint1729.me for more info on my education and employment) and till date I have great passion towards learning new stuff in field of Computer Science which made me to enroll for this course.
+
+I have completed Andrew Ng's Machine Learning course in 36 days and achieved 100% grade.
+
+I earn X amount salary, of which
+
+    -> 0.51 X goes to EMI payment of a new house which has been gifted to my parents recently
+    -> 0.37 X goes to my living and expenses (includes rent, food, travel etc.,), as I stay at a place far away from my hometown.
+    -> 0.12 X of the money goes to savings.
+
+My company policy does not include reimbursing for online MOOC learning. I can afford to pay for the course only in installments but I do not own a credit card as of now.
+
+I can do content editing and assistantship to course by putting extra effort in grading peers assignments. I can actively participate in group discussions and share/gain knowledge by clarifying/reading peer posts. I will follow the Coursera terms and conditions and I am totally against code plagiarism, and would complete the coursework honestly with my sincere effort.
+
+
+I recently started working on Development of RESTful applications in my office. I want to gain expertise in applying design pattern principles. I found this course on Coursera is an apt match for my current interest.

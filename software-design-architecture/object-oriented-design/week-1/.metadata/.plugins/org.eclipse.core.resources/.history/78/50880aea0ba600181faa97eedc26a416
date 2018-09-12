@@ -1,0 +1,67 @@
+package org.coursera.sda.ood;
+
+public class Person {
+
+	
+	String firstName;
+	String lastName;
+	int age = 0;
+	String organization = null;
+	String designation = null;
+
+
+	Person() {
+	}
+	
+	Person(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	Person(String firstName, String lastName, int age) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+	}
+	
+	
+
+	public String getOrganization() {
+		return organization;
+	}
+
+	public void setOrganization(String organization) {
+		this.organization = organization;
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+	
+	public void introduce() {
+		
+		if((this.firstName == null) || (this.lastName == null)) {
+			System.out.println("Enter both first and last names");
+			return;
+		}
+		
+		if(this.age < 1) {
+			System.out.println("Enter your age");
+			return;			
+		}
+
+		
+		
+		StringBuffer sb = new StringBuffer();
+		System.out.println(sb.toString());
+	}
+	
+	public void main(String args[]) {
+		
+	}
+	
+}
