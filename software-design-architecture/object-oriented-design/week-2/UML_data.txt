@@ -1,0 +1,204 @@
+MainActivity
+SectionsPagerAdapter
+ItemsFragment
+AllItemsFragment
+AvailableItemsFragment
+BorrowedItemsFragment
+AddItemActivity
+EditItemActivity
+ItemList
+Item
+ItemAdapter
+Dimensions
+
+
+2	Class	UML	1		MainActivity		"# onCreate(savedInstanceState: Bundle)
++ addItemActivity(view: View)"
+
+
+SectionsPagerAdapter
+
+3	Class	UML	1		SectionsPagerAdapter		"+ SectionsPagerAdapter(fm: FragmentManager)
++ getItem(position: int): Fragment
++ getCount(): int
++ getPageTitle(position: int): CharSequence"
+
+
+ItemsFragment
+
+
+4	Class	UML	1		ItemsFragment	"- item_list: ItemList = new ItemList()
+- rootView: View = null
+- list_view: ListView = null
+- adapter: ArrayAdapter<Item> = null
+- selected_items: ArrayList<Item>
+- inflater: LayoutInflater
+- container: ViewGroup
+- context: Context"	"+ onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View
++ setVariables(resource: int, id: int)
++ setAdapter(fragment: Fragment)
++ filterItems(): ArrayList<Item>"
+
+
+
+AllItemsFragment
+
+
+5	Class	UML	1		AllItemsFragment		"+ onCreateView(inflater:LayoutInflater, container: ViewGroup, savedInstanceState:Bundle): View
++ filterItems(): ArrayList<Item>"
+
+
+
+AvailableItemsFragment
+
+
+6	Class	UML	1		AvailableItemsFragment		"+ onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View
++ filterItems(): ArrayList<Item>"
+
+
+
+BorrowedItemsFragment
+
+
+7	Class	UML	1		BorrowedItemsFragment		"+ onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View
++ filterItems(): ArrayList<Item>"
+
+
+
+AddItemActivity
+
+
+8	Class	UML	1		AddItemActivity	"- title: EditText
+- maker: EditText
+- description: EditText
+- length: EditText
+- width: EditText
+- height: EditText
+- photo: ImageView
+- image: Bitmap
+- REQUEST_CODE: int = 1
+- item_list: ItemList = new ItemList()
+- context: Context"	"# onCreate(savedInstanceState: Bundle)
++ saveItem(view: View)
++ addPhoto(view: View)
++ deletePhoto(view: View)
+# onActivityResult(request_code: int, result_code: int, intent: Intent)"
+
+
+
+EditItemActivity
+
+
+9	Class	UML	1		EditItemActivity	"- item_list: ItemList = new ItemList()
+- item: Item
+- context: Context
+- image: Bitmap
+- REQUEST_CODE: int = 1
+- photo: ImageView
+- title: EditText
+- maker: EditText
+- description: EditText
+- length: EditText
+- width: EditText
+- height: EditText
+- borrower: EditText
+- borrower_tv: TextView
+- status: Switch"	"# onCreate(savedInstanceState: Bundle)
++ addPhoto(view: View)
++ deletePhoto(view: View)
+# onActivityResult(request_code: int, result_code: int, intent: Intent)
++ deleteItem(view: View)
++ saveItem(view: View)
++ toggleSwitch(view: View)"
+
+
+ItemList
+
+
+10	Class	UML	1		ItemList	"- items: ArrayList<Item>
+- FILENAME: String = \"items.sav\""	"+ ItemList
++ setItems(item_list: ArrayList<Item>)
++ getItems(): ArrayList<Item>
++ addItem(item: Item)
++ deleteItem(item: Item)
++ getItem(index: int): Item
++ getIndex(item: Item): int
++ getSize(): int
++ loadItems(context: Context)
++ saveItems(context: Context)
++ filterItemsByStatus(status: String): ArrayList<Item>"
+
+
+Item
+
+
+11	Class	UML	1		Item	"- title: String
+- maker: String
+- description: String
+- dimensions: Dimensions
+- status: String
+- borrower: String
+# image: Bitmap
+# image_base64: String
+- id: String"	"+ Item(title: String, maker: String, description: String, dimensions: Dimensions, image: Bitmap, id: String)
++ getId(): String
++ setId()
++ updateId(id: String)
++ setTitle(title: String)
++ getTitle(): String
++ setMaker(maker: String)
++ getMaker(): String
++ setDescription(description: String)
++ getDescription(): String
++ setDimensions(dimensions: Dimensions)
++ getDimensions(): Dimensions
++ setStatus(status: String)
++ getStatus(): String
++ setBorrower(borrower: String)
++ getBorrower(): String
++ addImage(new_image: Bitmap)
++ getImage(): Bitmap"
+
+
+
+ItemAdapter
+
+
+12	Class	UML	1		ItemAdapter	"- inflater: LayoutInflater
+- fragment: Fragment
+- context: Context"	"+ ItemAdapter(context: Context, items: ArrayList<Item>, fragment: Fragment)
++ getView(position: int, convertView: View, parent: ViewGroup): View"
+
+
+
+Dimensions
+
+
+13	Class	UML	1		Dimensions	"- length: String
+- width: String
+- height: String"	"+ Dimensions(length: String, width: String, height: String)
++ getLength(): String
++ getWidth(): String
++ getHeight(): String
++ getDimensions(): String
++ setDimensions(length: String, width: String, height: String)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
