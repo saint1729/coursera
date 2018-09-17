@@ -3,9 +3,15 @@ package com.example.sharingapp;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+<<<<<<< HEAD
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+=======
+import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+>>>>>>> ba097ec76c77ac341a24e7f2211527528faad814
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;

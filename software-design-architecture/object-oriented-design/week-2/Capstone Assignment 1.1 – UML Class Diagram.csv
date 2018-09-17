@@ -1,0 +1,21 @@
+Id,Name,Shape Library,Page ID,Contained By,Text Area 1,Text Area 2,Text Area 3
+1,Page,,,,Page 1,,
+2,Class,UML,1,,MainActivity,,"# onCreate(savedInstanceState: Bundle)
++ addItemActivity(view: View)"
+3,Class,UML,1,,SectionsPagerAdapter,,"+ SectionsPagerAdapter(fm: FragmentManager)
++ getItem(position: int): Fragment
++ getCount(): int
++ getPageTitle(position: int): CharSequence"
+4,Class,UML,1,,ItemsFragment,"- item_list: ItemList = new ItemList()
+- rootView: View = null
+- list_view: ListView = null
+- adapter: ArrayAdapter<Item> = null
+- selected_items: ArrayList<Item>
+- inflater: LayoutInflater
+- container: ViewGroup
+- context: Context","+ onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle): View
++ setVariables(resource: int, id: int)
++ setAdapter(fragment: Fragment)
++ filterItems(): ArrayList<Item>"
+5,Class,UML,1,,AllItemsFragment,,"+ onCreateView(inflater:LayoutInflater, container: ViewGroup, savedInstanceState:Bundle): View
++ filterItems(): ArrayList<Item>"
