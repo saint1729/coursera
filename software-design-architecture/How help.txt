@@ -1,11 +1,7 @@
 I am a good Algorithmist but not a good design person.
 
-In my current job I recently started developing RESTful web applications using technologies like Java/J2EE, Oracle ADF. I feel that I am not so strong in developing an application with good design. But, I have a strong wish to improve my design pattern application skills. I am working along those lines. I strongly believe that this course will assist me in achieving this goal.
+In my current job I recently started developing RESTful web applications using technologies like Java/J2EE, Oracle ADF. I feel that I am not so strong in developing an application with good design. But, I have a strong wish to improve my design pattern application skills. I am working along those lines. I strongly believe that this specialization will assist me in achieving this goal. I also completed first course in this specialization ("Object-Oriented Design") by submitting all the Capstone Assignments on my own. I am very much confident that I will complete the remaining courses with great interest as I loved the course lectures, material and assignments a lot. 
 
-Also, this specialization looks like a right choice that helps me in preparing for tech interviews to learn different most commonly used design patterns to create reusable and flexible software applications, that will land me in my dream job in companies like Amazon, Uber, Microsoft, Google where many systems are created using REST interfaces.
+Also, this specialization looks like a right choice that helps me in preparing for tech interviews to learn different most commonly used design patterns to create modular, flexible and reusable software applications, that will land me in my dream job in companies like Google, Uber, Microsoft, Amazon where mainly design skills are tested during technical interviews.
 
 Also, identifying bad design practices in code through code smells is taught in this specialization. This is very much useful for me because, with this I can restructure/modularize the code to optimize the memory resources utilized while execution.
-
-
-Thanks,
-Sai (http://saint1729.me)
