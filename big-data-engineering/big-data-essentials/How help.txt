@@ -1,0 +1,7 @@
+I am a good Algorithmist but not good at designing distributed systems as I never worked with large amounts of data. At my previous company (Oracle), I was working with relational datastores and concept of vertical scaling. With the advent of new technologies like Hadoop and its Eco system, Big Data has now become a necessary learning for a Software Engineer of my experience(5+ years) and is the case with me too. My current job at "Waterline Data" involves work on Big Data related technologies like Hadoop, Apache Spark etc., I am pretty much new to this area. I want to learn this course and quickly grow at my workplace, thus becoming a valuable contributor for my organization.
+
+This specialization looks like a right choice that helps me in gaining good knowledge about various Big Data related technologies such as Hadoop, MapReduce, Apache Spark etc, Warehouse Data Processing, Real-time Data Processing etc.,
+
+Machine Learning/Data Science has always been my area of interest. I completed Andrew Ng's "Machine Learning" course on Coursera, but couldn't get a chance to deploy it in a distributed environment. This specialization is also teaching me to develop machine learning models at scale and deply them into a production environment.
+
+
