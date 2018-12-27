@@ -13,7 +13,7 @@ My coursera work for various coursers
 
 4) Specialization: Software Design and Architecture Specialization
       1. Course: Object-Oriented Design (Grade achieved: 99.2%)
-      2. Course: Design Patterns (Financial Aid Approved. Currently undertaking)
+      2. Course: Design Patterns (Financial Aid approved. Currently undertaking)
 
 5) Specialization: Big Data for Data Engineers Specialization
       1. Course: Big Data Essentials: HDFS, MapReduce and Spark RDD (Waiting for financial aid to be approved).
