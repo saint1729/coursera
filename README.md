@@ -16,4 +16,4 @@ My coursera work for various coursers
       2. Course: Design Patterns (Financial Aid approved. Currently undertaking the course.)
 
 5) Specialization: Big Data for Data Engineers Specialization
-      1. Course: Big Data Essentials: HDFS, MapReduce and Spark RDD (Waiting for financial aid to be approved).
+      1. Course: Big Data Essentials: HDFS, MapReduce and Spark RDD (Waiting for financial aid to be approved. Started auditing the course and currently in 2nd week).
