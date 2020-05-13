@@ -1,0 +1,7 @@
+I have applied for MS in Applied Mathematics program (Fall 2020) and got an admit from Northeastern University. I want to complete a few courses in advance, before going to university as it can help to start from a point greater than zero once I go to university.
+
+I already completed the first three courses as part of the specialization "Mathematics for Data Science". This application is for financial aid for the last course "Probability Theory, Statistics and Exploratory Data Analysis" in this specialization.
+
+My long term goal is to end up as a Data Scientist or an ML Engineer at a leading technology company. This specialization looks like the right choice as it helps me in gaining good knowledge in various subjects required for Data Science such as Linear Algebra, Multivariate Calculus, Probability & Statistics.
+
+Machine Learning/Data Science has always been my area of interest. I completed Andrew Ng's "Machine Learning" course on Coursera, but couldn't get a chance to deploy it in a distributed environment. This specialization can help me cover the core required before I can start the implementation of these techniques after I land at my dream job.
