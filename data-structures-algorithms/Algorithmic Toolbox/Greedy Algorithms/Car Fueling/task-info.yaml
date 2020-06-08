@@ -1,0 +1,109 @@
+type: edu
+files:
+- name: car_fueling.py
+  visible: true
+  placeholders:
+  - offset: 259
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 259
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def compute_min_number_of_refills(d, m, stops):
+        assert 1 <= d <= 10 ** 5
+        assert 1 <= m <= 400
+        assert 1 <= len(stops) <= 300
+        assert 0 < stops[0] and all(stops[i] < stops[i + 1] for i in range(len(stops) - 1)) and stops[-1] < d
+
+        type here
+
+
+    if __name__ == '__main__':
+        input_d = int(input())
+        input_m = int(input())
+        input_n = int(input())
+        input_stops = list(map(int, input().split()))
+        assert len(input_stops) == input_n
+
+        print(compute_min_number_of_refills(input_d, input_m, input_stops))
+  learner_created: false
+- name: car_fueling_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 307
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 307
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from car_fueling import compute_min_number_of_refills
+
+
+    class CarFueling(unittest.TestCase):
+        def test(self):
+            for (d, m, stops, answer) in [
+                (950, 400, [200, 375, 550, 750], 2),
+                (10, 3, [1, 2, 5, 9], -1),
+                (200, 250, [100, 150], 0),
+                type here
+            ]:
+                self.assertEqual(compute_min_number_of_refills(d, m, stops), answer)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from car_fueling import compute_min_number_of_refills
+
+
+    def reference(distance, tank, stops):
+        stops = [0] + stops + [distance]
+        num_refills, cur_refill = 0, 0
+        while cur_refill <= len(stops) - 2:
+            last_refill = cur_refill
+            while cur_refill <= len(stops) - 2 and stops[cur_refill + 1] - stops[last_refill] <= tank:
+                cur_refill += 1
+            if cur_refill == last_refill:
+                return -1
+            if cur_refill <= len(stops) - 2:
+                num_refills += 1
+
+        return num_refills
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("car_fueling_unit_tests.py")
+
+        all_tests_passed = True
+        for (d, m, stops) in [(500, 200, [100, 200, 300, 400])]:
+            if reference(d, m, stops) != compute_min_number_of_refills(d, m, stops):
+                all_tests_passed = False
+                failed("Wrong answer for d={}, m={}, stops={}".format(d, m, stops))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/kAiGl/programming-assignment-2-greedy-algorithms/discussions
+status: Unchecked
+record: -1

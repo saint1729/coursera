@@ -1,0 +1,124 @@
+type: edu
+files:
+- name: fibonacci_number_again.py
+  visible: true
+  placeholders:
+  - offset: 369
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 369
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def fibonacci_number_again_naive(n, m):
+        assert 0 <= n <= 10 ** 18 and 2 <= m <= 10 ** 3
+
+        if n <= 1:
+            return n
+
+        previous, current = 0, 1
+        for _ in range(n - 1):
+            previous, current = current, (previous + current) % m
+
+        return current
+
+
+    def fibonacci_number_again(n, m):
+        assert 0 <= n <= 10 ** 18 and 2 <= m <= 10 ** 3
+
+        type here
+
+
+    if __name__ == '__main__':
+        input_n, input_m = map(int, input().split())
+        print(fibonacci_number_again(input_n, input_m))
+  learner_created: false
+- name: fibonacci_number_again_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 456
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 456
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from itertools import product
+    from fibonacci_number_again import fibonacci_number_again, fibonacci_number_again_naive
+
+
+    class TestFibonacciNumberAgain(unittest.TestCase):
+        def test_small(self):
+            for n, m in product(range(2, 15), repeat=2):
+                self.assertEqual(fibonacci_number_again(n, m), fibonacci_number_again_naive(n, m))
+
+        def test_large(self):
+            for (n, m, r) in [(115, 1000, 885), (2816213588, 239, 151), type here]:
+                self.assertEqual(fibonacci_number_again(n, m), r)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: table1.png
+  visible: false
+  learner_created: false
+- name: table2.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from fibonacci_number_again import fibonacci_number_again
+
+
+    def pisano_period(m):
+        current, next = 0, 1
+        period = 0
+
+        while True:
+            current, next = next, (current + next) % m
+            period += 1
+            if current == 0 and next == 1:
+                return period
+
+
+    def fib_mod(n, m):
+        current, next = 0, 1
+        for _ in range(n):
+            current, next = next, (current + next) % m
+
+        return current
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("fibonacci_number_again_unit_tests.py")
+
+        all_tests_passed = True
+        for (n, m) in [(7, 239), (239, 7), (10 ** 18, 239)]:
+            if fibonacci_number_again(n, m) != fib_mod(n % pisano_period(m), m):
+                all_tests_passed = False
+                failed("Wrong answer for n={}".format(m))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/b66y2/programming-assignment-1-introduction/discussions
+status: Unchecked
+record: -1

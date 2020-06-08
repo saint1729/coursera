@@ -1,0 +1,107 @@
+type: edu
+files:
+- name: quicksort_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 240
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 240
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from quicksort import randomized_quick_sort
+    from random import randint
+
+
+    class TestQuickSort(unittest.TestCase):
+        def test_small(self):
+            for array in [
+                ([1, 2, 3]),
+                ([3, 2, 1]),
+                type here
+            ]:
+                sorted_array = sorted(list(array))
+                randomized_quick_sort(array, 0, len(array) - 1)
+                self.assertEqual(array, sorted_array)
+
+        def test_large(self):
+            for n in (10, 100, 10 ** 5):
+                for max_value in (1, 2, 10, 10 ** 5):
+                    array = [randint(0, max_value) for _ in range(n)]
+                    sorted_array = sorted(list(array))
+                    randomized_quick_sort(array, 0, len(array) - 1)
+                    self.assertEqual(array, sorted_array)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from quicksort import randomized_quick_sort
+    from random import randint
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("quicksort_unit_tests.py")
+
+        all_tests_passed = True
+        for n in (3, 4, 5, 10, 100):
+            for array in (
+                [1] * n,
+                [n - i for i in range(n)],
+                [i for i in range(n)],
+                [randint(0, n) for _ in range(n)]
+            ):
+                sorted_array = sorted(list(array))
+                randomized_quick_sort(array, 0, len(array) - 1)
+                if sorted_array != array:
+                    all_tests_passed = False
+                    failed("Wrong answer for array={}".format(array))
+                    break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+- name: quicksort.py
+  visible: true
+  placeholders:
+  - offset: 80
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 80
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  - offset: 259
+    length: 80
+    placeholder_text: "make a call to partition3 and then two recursive calls \nto\
+      \ randomized_quick_sort"
+    initial_state:
+      length: 80
+      offset: 259
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: "# python3\n\nfrom random import randint\n\n\ndef partition3(array, left,\
+    \ right):\n    type here\n\n\ndef randomized_quick_sort(array, left, right):\n\
+    \    if left >= right:\n        return\n    k = randint(left, right)\n    array[left],\
+    \ array[k] = array[k], array[left]\n    make a call to partition3 and then two\
+    \ recursive calls \nto randomized_quick_sort\n\n\nif __name__ == '__main__':\n\
+    \    input_n = int(input())\n    elements = list(map(int, input().split()))\n\
+    \    assert len(elements) == input_n\n    randomized_quick_sort(elements, 0, len(elements)\
+    \ - 1)\n    print(*elements)\n"
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/w9YDz/programming-assignment-3-divide-and-conquer/discussions
+status: Unchecked
+record: -1

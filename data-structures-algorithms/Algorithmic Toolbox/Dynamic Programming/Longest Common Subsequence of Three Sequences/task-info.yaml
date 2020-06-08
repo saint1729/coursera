@@ -1,0 +1,129 @@
+type: edu
+files:
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from lcs3 import lcs3
+    from random import randint, seed
+
+
+    def ref(a, b, c):
+        d = [[[0 for _ in range(len(c) + 1)] for _ in range(len(b) + 1)] for _ in range(len(a) + 1)]
+        for i in range(len(a) + 1):
+            for j in range(len(b) + 1):
+                for k in range(len(c) + 1):
+                    if i < len(a):
+                        d[i + 1][j][k] = max(d[i][j][k], d[i + 1][j][k])
+                    if j < len(b):
+                        d[i][j + 1][k] = max(d[i][j][k], d[i][j + 1][k])
+                    if k < len(c):
+                        d[i][j][k + 1] = max(d[i][j][k], d[i][j][k + 1])
+                    if i < len(a) and j < len(b) and k < len(c) and a[i] == b[j] == c[k]:
+                        d[i + 1][j + 1][k + 1] = max(d[i + 1][j + 1][k + 1], d[i][j][k] + 1)
+        return d[len(a)][len(b)][len(c)]
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("lcs3_unit_tests.py")
+
+        seed(239)
+
+        all_tests_passed = True
+
+        for _ in range(10):
+            for n in (3, 5, 20, 10):
+                for m in (2, 3, 4, 10, 100):
+                    lena = randint(1, n)
+                    lenb = randint(1, n)
+                    lenc = randint(1, n)
+                    a = [randint(1, m) for _ in range(lena)]
+                    b = [randint(1, m) for _ in range(lenb)]
+                    c = [randint(1, m) for _ in range(lenc)]
+
+                    if lcs3(a, b, c) != ref(a, b, c):
+                        all_tests_passed = False
+                        failed("Wrong answer: {}; {}; {}".format(a, b, c))
+                        break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+- name: lcs3.py
+  visible: true
+  placeholders:
+  - offset: 191
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 191
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def lcs3(first_sequence, second_sequence, third_sequence):
+        assert len(first_sequence) <= 100
+        assert len(second_sequence) <= 100
+        assert len(third_sequence) <= 100
+
+        type here
+
+
+    if __name__ == '__main__':
+        n = int(input())
+        a = list(map(int, input().split()))
+        assert len(a) == n
+
+        m = int(input())
+        b = list(map(int, input().split()))
+        assert len(b) == m
+
+        q = int(input())
+        c = list(map(int, input().split()))
+        assert len(c) == q
+
+        print(lcs3(a, b, c))
+  learner_created: false
+- name: lcs3_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 406
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 406
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from lcs3 import lcs3
+
+
+    class LCS3(unittest.TestCase):
+        def test(self):
+            for first_sequence, second_sequence, third_sequence, answer in (
+                ((1, 2, 3), (2, 1, 3), (1, 3, 5), 2),
+                ((8, 3, 2, 1, 7), (8, 2, 1, 3, 8, 10, 7), (6, 8, 3, 1, 4, 7), 3),
+                ([7] * 25, [6, 7] * 25, [7] * 25, 25),
+                ([7] * 25, [7] * 100, [5, 6] * 50, 0),
+                type here
+            ):
+                self.assertEqual(lcs3(first_sequence, second_sequence, third_sequence), answer)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/ekN4T/programming-assignment-4-dynamic-programming/discussions
+status: Unchecked
+record: -1

@@ -1,0 +1,133 @@
+type: edu
+files:
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: organizing_lottery_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 245
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 245
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  - offset: 456
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 456
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  - offset: 501
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 501
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from organizing_lottery import points_cover, points_cover_naive
+
+
+    class PointsAndSegments(unittest.TestCase):
+        def test_small(self):
+            for starts, ends, points in [
+                ([0, 7], [5, 10], [1, 6, 11]),
+                type here
+            ]:
+                self.assertEqual(points_cover(list(starts), list(ends), list(points)),
+                                 points_cover_naive(starts, ends, points))
+
+        def test_random(self):
+            type here
+
+        def test_large(self):
+            type here
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from organizing_lottery import points_cover, points_cover_naive
+    from random import randint
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("organizing_lottery_unit_tests.py")
+
+        all_tests_passed = True
+
+        for n in (3, 4, 5, 10, 100):
+            for m in (3, 4, 100, 200):
+                points = [randint(-10, 10) for _ in range(m)]
+                starts = [randint(-5, 0) for _ in range(n)]
+                ends = [randint(0, 5) for _ in range(n)]
+
+                if points_cover(starts, ends, points) != points_cover_naive(starts, ends, points):
+                    all_tests_passed = False
+                    failed("Wrong answer for starts={}, ends={}, points={}".format(starts, ends, points))
+                    break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+- name: organizing_lottery.py
+  visible: true
+  placeholders:
+  - offset: 416
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 416
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+    from sys import stdin
+    from bisect import bisect_left, bisect_right
+
+
+    def points_cover_naive(starts, ends, points):
+        assert len(starts) == len(ends)
+        count = [0] * len(points)
+
+        for index, point in enumerate(points):
+            for start, end in zip(starts, ends):
+                if start <= point <= end:
+                    count[index] += 1
+
+        return count
+
+
+    def points_cover(starts, ends, points):
+        type here
+
+
+    if __name__ == '__main__':
+        data = list(map(int, stdin.read().split()))
+        n, m = data[0], data[1]
+        input_starts, input_ends = data[2:2 * n + 2:2], data[3:2 * n + 2:2]
+        input_points = data[2 * n + 2:]
+
+        output_count = points_cover(input_starts, input_ends, input_points)
+        print(*output_count)
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/w9YDz/programming-assignment-3-divide-and-conquer/discussions
+status: Unchecked
+record: -1

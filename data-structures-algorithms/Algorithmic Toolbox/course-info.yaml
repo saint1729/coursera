@@ -1,0 +1,18 @@
+type: coursera
+title: Algorithmic Toolbox
+language: English
+summary: "Learn algorithms through solving programming challenges in the PyCharm IDE!\
+  \ This professional IDE will help you to format and structure your code, as well\
+  \ as test and debug it. \n\nThis course powers our popular <a href=\"https://www.coursera.org/specializations/data-structures-algorithms\"\
+  >Data Structures and Algorithms online specialization on Coursera</a>. We encourage\
+  \ you to sign up for a session and learn this material while interacting with thousands\
+  \ of other talented students from around the world."
+programming_language: Python
+content:
+- Programming Challenges
+- Algorithmic Warm Up
+- Greedy Algorithms
+- Divide-and-Conquer
+- Dynamic Programming
+mode: Study
+submit_manually: true

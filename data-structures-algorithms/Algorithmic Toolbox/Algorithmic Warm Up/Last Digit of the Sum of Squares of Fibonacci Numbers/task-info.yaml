@@ -1,0 +1,101 @@
+type: edu
+files:
+- name: last_digit_of_the_sum_of_squares_of_fibonacci_numbers.py
+  visible: true
+  placeholders:
+  - offset: 510
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 510
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def last_digit_of_the_sum_of_squares_of_fibonacci_numbers_naive(n):
+        assert 0 <= n <= 10 ** 18
+
+        if n <= 1:
+            return n
+
+        fibonacci_numbers = [0] * (n + 1)
+        fibonacci_numbers[0] = 0
+        fibonacci_numbers[1] = 1
+        for i in range(2, n + 1):
+            fibonacci_numbers[i] = fibonacci_numbers[i - 2] + fibonacci_numbers[i - 1]
+
+        return sum([f ** 2 for f in fibonacci_numbers]) % 10
+
+
+    def last_digit_of_the_sum_of_squares_of_fibonacci_numbers(n):
+        assert 0 <= n <= 10 ** 18
+
+        type here
+
+
+    if __name__ == '__main__':
+        input_n = int(input())
+        print(last_digit_of_the_sum_of_squares_of_fibonacci_numbers(input_n))
+  learner_created: false
+- name: last_digit_of_the_sum_of_squares_of_fibonacci_numbers_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 593
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 593
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from last_digit_of_the_sum_of_squares_of_fibonacci_numbers import last_digit_of_the_sum_of_squares_of_fibonacci_numbers, last_digit_of_the_sum_of_squares_of_fibonacci_numbers_naive
+
+
+    class TestLastDigitOfTheSumOfSquaresOfFibonacciNumbers(unittest.TestCase):
+        def test_small(self):
+            for n in range(20):
+                self.assertEqual(last_digit_of_the_sum_of_squares_of_fibonacci_numbers(n),
+                                 last_digit_of_the_sum_of_squares_of_fibonacci_numbers_naive(n))
+
+        def test_large(self):
+            for (n, last_digit) in [(73, 1), (1234567890, 0), type here]:
+                self.assertEqual(last_digit_of_the_sum_of_squares_of_fibonacci_numbers(n), last_digit)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from last_digit_of_the_sum_of_squares_of_fibonacci_numbers import last_digit_of_the_sum_of_squares_of_fibonacci_numbers
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("last_digit_of_the_sum_of_fibonacci_numbers_unit_tests.py")
+
+        all_tests_passed = True
+        for n, d in [(73, 1)]:
+            if last_digit_of_the_sum_of_squares_of_fibonacci_numbers(n) != d:
+                all_tests_passed = False
+                failed("Wrong answer for n={}".format(n))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/b66y2/programming-assignment-1-introduction/discussions
+status: Unchecked
+record: -1

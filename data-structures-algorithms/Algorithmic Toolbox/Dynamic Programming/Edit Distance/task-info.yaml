@@ -1,0 +1,108 @@
+type: edu
+files:
+- name: edit_distance.py
+  visible: true
+  placeholders:
+  - offset: 64
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 64
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def edit_distance(first_string, second_string):
+        type here
+
+
+    if __name__ == "__main__":
+        print(edit_distance(input(), input()))
+  learner_created: false
+- name: edit_distance_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 364
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 364
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from edit_distance import edit_distance
+
+
+    class EditDistance(unittest.TestCase):
+        def test(self):
+            for first_string, second_string, answer in (
+                ("ab", "ab", 0),
+                ("short", "ports", 3),
+                ("editing", "distance", 5),
+                ("a" * 100, "a" * 100, 0),
+                ("ab" * 50, "ba" * 50, 2),
+                type here
+            ):
+                self.assertEqual(edit_distance(first_string, second_string), answer)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from edit_distance import edit_distance
+
+
+    def reference(s, t):
+        sn = len(s)
+        tn = len(t)
+
+        f = [[10**9] * (tn + 2) for _ in range(sn + 2)]
+        f[0][0] = 0
+
+        def relax(p, q, x):
+            f[p][q] = min(f[p][q], x)
+
+        for i in range(sn + 1):
+            for j in range(tn + 1):
+                if i < sn and j < tn:
+                    relax(i + 1, j + 1, f[i][j] + (1 if s[i] != t[j] else 0))
+                relax(i + 1, j, f[i][j] + 1)
+                relax(i, j + 1, f[i][j] + 1)
+        return f[sn][tn]
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("edit_distance_unit_tests.py")
+
+        all_tests_passed = True
+
+        for first, second in (
+            ("abacabadabacabaeabacab", "aeabacabad"),
+
+        ):
+            if edit_distance(first, second) != reference(first, second):
+                all_tests_passed = False
+                failed("Wrong answer for {} and {}".format(first, second))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/ekN4T/programming-assignment-4-dynamic-programming/discussions
+status: Unchecked
+record: -1

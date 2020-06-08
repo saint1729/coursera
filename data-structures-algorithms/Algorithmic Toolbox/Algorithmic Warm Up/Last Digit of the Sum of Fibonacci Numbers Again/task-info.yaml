@@ -1,0 +1,122 @@
+type: edu
+files:
+- name: last_digit_of_the_sum_of_fibonacci_numbers_again.py
+  visible: true
+  placeholders:
+  - offset: 608
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 608
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def last_digit_of_the_sum_of_fibonacci_numbers_again_naive(from_index, to_index):
+        assert 0 <= from_index <= to_index <= 10 ** 18
+
+        if to_index == 0:
+            return 0
+
+        fibonacci_numbers = [0] * (to_index + 1)
+        fibonacci_numbers[0] = 0
+        fibonacci_numbers[1] = 1
+        for i in range(2, to_index + 1):
+            fibonacci_numbers[i] = fibonacci_numbers[i - 2] + fibonacci_numbers[i - 1]
+
+        return sum(fibonacci_numbers[from_index:to_index + 1]) % 10
+
+
+    def last_digit_of_the_sum_of_fibonacci_numbers_again(from_index, to_index):
+        assert 0 <= from_index <= to_index <= 10 ** 18
+
+        type here
+
+
+    if __name__ == '__main__':
+        input_from, input_to = map(int, input().split())
+        print(last_digit_of_the_sum_of_fibonacci_numbers_again(input_from, input_to))
+  learner_created: false
+- name: last_digit_of_the_sum_of_fibonacci_numbers_again_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 904
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 904
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from itertools import combinations
+    from last_digit_of_the_sum_of_fibonacci_numbers_again import last_digit_of_the_sum_of_fibonacci_numbers_again, \
+        last_digit_of_the_sum_of_fibonacci_numbers_again_naive
+
+
+    class TestLastDigitOfTheSumOfFibonacciNumbersAgain(unittest.TestCase):
+        def test_small(self):
+            for from_index, to_index in combinations(range(2, 15), 2):
+                self.assertEqual(last_digit_of_the_sum_of_fibonacci_numbers_again(from_index, to_index),
+                                 last_digit_of_the_sum_of_fibonacci_numbers_again_naive(from_index, to_index))
+
+        def test_large(self):
+            for (from_index, to_index, last_digit) in [(3, 7, 1), (10, 10, 5), (100, 200, 0),
+                                                       (17, 1700, 7),
+                                                       (19, 10000000000, 1),
+                                                       type here]:
+                self.assertEqual(last_digit_of_the_sum_of_fibonacci_numbers_again(from_index, to_index), last_digit)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from last_digit_of_the_sum_of_fibonacci_numbers_again import last_digit_of_the_sum_of_fibonacci_numbers_again
+
+
+    def fibonacci_sum_last_digit(n):
+        n = n % 60
+
+        prev, cur = 0, 1
+        for _ in range(n):
+            prev, cur = cur, (prev + cur) % 10
+
+        return (prev + 9) % 10
+
+    def reference(from_index, to_index):
+        return (20 + fibonacci_sum_last_digit(to_index + 2) - fibonacci_sum_last_digit(from_index + 1)) % 10
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("last_digit_of_the_sum_of_fibonacci_numbers_again_unit_tests.py")
+
+        all_tests_passed = True
+        for (from_index, to_index) in [(1, 2), (2, 239), (1, 10 ** 10), (10 ** 10, 10 ** 13)]:
+            assert from_index <= to_index
+            if last_digit_of_the_sum_of_fibonacci_numbers_again(from_index, to_index) != reference(from_index, to_index):
+                all_tests_passed = False
+                failed("Wrong answer for m={}, n={}: {} {}".format(from_index, to_index,
+                                                                   last_digit_of_the_sum_of_fibonacci_numbers_again(from_index, to_index),
+                                                                   reference(from_index, to_index)))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/b66y2/programming-assignment-1-introduction/discussions
+status: Unchecked
+record: -1

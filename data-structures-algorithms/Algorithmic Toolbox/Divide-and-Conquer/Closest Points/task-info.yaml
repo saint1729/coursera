@@ -1,0 +1,144 @@
+type: edu
+files:
+- name: closest_points.py
+  visible: true
+  placeholders:
+  - offset: 600
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 600
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+    from collections import namedtuple
+    from itertools import combinations
+    from math import sqrt
+
+
+    Point = namedtuple('Point', 'x y')
+
+
+    def distance_squared(first_point, second_point):
+        return (first_point.x - second_point.x) ** 2 + (first_point.y - second_point.y) ** 2
+
+
+    def minimum_distance_squared_naive(points):
+        min_distance_squared = float("inf")
+
+        for p, q in combinations(points, 2):
+            min_distance_squared = min(min_distance_squared,
+                                       distance_squared(p, q))
+
+        return min_distance_squared
+
+
+    def minimum_distance_squared(points):
+        type here
+
+
+    if __name__ == '__main__':
+        input_n = int(input())
+        input_points = []
+        for _ in range(input_n):
+            x, y = map(int, input().split())
+            input_point = Point(x, y)
+            input_points.append(input_point)
+
+        print("{0:.9f}".format(sqrt(minimum_distance_squared_naive(input_points))))
+  learner_created: false
+- name: closest_points_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 278
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 278
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  - offset: 1059
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 1059
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from closest_points import minimum_distance_squared, minimum_distance_squared_naive, Point
+    from random import randint
+
+
+    class ClosestPoints(unittest.TestCase):
+        def test_small(self):
+            for points in (
+                [Point(1, 0), Point(1, 1)],
+                type here
+            ):
+                self.assertAlmostEqual(minimum_distance_squared(points),
+                                       minimum_distance_squared_naive(points),
+                                       delta=1e-03)
+
+        def test_random(self):
+            for n in [2, 5, 10, 100]:
+                for max_value in [1, 2, 3, 1000]:
+                    points = []
+                    for _ in range(n):
+                        x = randint(-max_value, max_value)
+                        y = randint(-max_value, max_value)
+                        points.append(Point(x, y))
+
+                    self.assertAlmostEqual(minimum_distance_squared(points),
+                                           minimum_distance_squared_naive(points),
+                                           delta=1e-03)
+
+        def test_large(self):
+            type here
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from closest_points import minimum_distance_squared, minimum_distance_squared_naive, Point
+    from math import fabs
+    from random import randint
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("closest_points_unit_tests.py")
+
+        all_tests_passed = True
+
+        for points in (
+            [Point(-10 ** 9, - 10 ** 9), Point(10 ** 9, 10 ** 9)],
+            [Point(i, i + 1) for i in range(100)],
+            [Point(randint(1, 10), randint(1, 10)) for _ in range(5)],
+            [Point(randint(1, 10), randint(1, 10)) for _ in range(500)]
+        ):
+            if fabs(minimum_distance_squared(points) - minimum_distance_squared_naive(points)) > 1e-03:
+                all_tests_passed = False
+                failed("Wrong answer for points={}".format(points))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/w9YDz/programming-assignment-3-divide-and-conquer/discussions
+status: Unchecked
+record: -1

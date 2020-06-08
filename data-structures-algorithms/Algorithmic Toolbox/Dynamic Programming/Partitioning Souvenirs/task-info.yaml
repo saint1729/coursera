@@ -1,0 +1,103 @@
+type: edu
+files:
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from partition_souvenirs import partition3
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("partition_souvenirs_unit_tests.py")
+
+        all_tests_passed = True
+
+        for values, answer in (
+            ((20, ), 0),
+            ((7, 7, 7), 1),
+            ((3, 3, 3), 1),
+            ((3, 3, 3, 3), 0),
+            ((1, 2, 3, 4, 5, 5, 7, 7, 8, 10, 12, 19, 25), 1),
+            ([1]*10, 0),
+            ([1]*12, 1),
+            ([30] * 20, 0),
+            ([30] * 18, 1),
+        ):
+            if partition3(values) != answer:
+                all_tests_passed = False
+                failed("Wrong answer for values={}".format(values))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+- name: partition_souvenirs_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 282
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 282
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from partition_souvenirs import partition3
+
+
+    class PartitionSouvenirs(unittest.TestCase):
+        def test(self):
+            for values, answer in (
+                ((20, ), 0),
+                ((7, 7, 7), 1),
+                ((3, 3, 3), 1),
+                ((3, 3, 3, 3), 0),
+                type here
+            ):
+                self.assertEqual(partition3(values), answer)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: partition_souvenirs.py
+  visible: true
+  placeholders:
+  - offset: 173
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 173
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+    from itertools import product
+    from sys import stdin
+
+
+    def partition3(values):
+        assert 1 <= len(values) <= 20
+        assert all(1 <= v <= 30 for v in values)
+
+        type here
+
+
+    if __name__ == '__main__':
+        input_n, *input_values = list(map(int, stdin.read().split()))
+        assert input_n == len(input_values)
+        print(partition3(input_values))
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/ekN4T/programming-assignment-4-dynamic-programming/discussions
+status: Unchecked
+record: -1

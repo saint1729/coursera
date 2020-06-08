@@ -1,0 +1,107 @@
+type: edu
+files:
+- name: last_digit_of_fibonacci_number.py
+  visible: true
+  placeholders:
+  - offset: 303
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 303
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def last_digit_of_fibonacci_number_naive(n):
+        assert 0 <= n <= 10 ** 7
+
+        if n <= 1:
+            return n
+
+        return (last_digit_of_fibonacci_number_naive(n - 1) + last_digit_of_fibonacci_number_naive(n - 2)) % 10
+
+
+    def last_digit_of_fibonacci_number(n):
+        assert 0 <= n <= 10 ** 7
+
+        type here
+
+
+    if __name__ == '__main__':
+        input_n = int(input())
+        print(last_digit_of_fibonacci_number(input_n))
+  learner_created: false
+- name: last_digit_of_fibonacci_number_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 466
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 466
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from last_digit_of_fibonacci_number import last_digit_of_fibonacci_number, last_digit_of_fibonacci_number_naive
+
+
+    class TestLastDigitOfFibonacciNumber(unittest.TestCase):
+        def test_small(self):
+            for n in range(20):
+                self.assertEqual(last_digit_of_fibonacci_number_naive(n),
+                                 last_digit_of_fibonacci_number(n))
+
+        def test_large(self):
+            for (n, last_digit) in [(100, 5), (139, 1), (91239, 6), type here]:
+                self.assertEqual(last_digit_of_fibonacci_number(n), last_digit)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from last_digit_of_fibonacci_number import last_digit_of_fibonacci_number
+
+
+    def fibonacci_number_last_digit_reference(n):
+        assert 0 <= n <= 10 ** 6
+        if n <= 1:
+            return n
+
+        previous, current = 0, 1
+        for _ in range(n - 1):
+            previous, current = current, (previous + current) % 10
+
+        return current
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("last_digit_of_fibonacci_number_unit_tests.py")
+
+        all_tests_passed = True
+        for m in [2, 3, 239, 240, 1000, 9999, 10**6]:
+            if last_digit_of_fibonacci_number(m) != fibonacci_number_last_digit_reference(m):
+                all_tests_passed = False
+                failed("Wrong answer for n={}".format(m))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/b66y2/programming-assignment-1-introduction/discussions
+status: Unchecked
+record: -1

@@ -1,0 +1,98 @@
+type: edu
+files:
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: money_change_again.py
+  visible: true
+  placeholders:
+  - offset: 365
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 365
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def change_naive(money):
+        min_coins = float("inf")
+
+        for num1 in range(money + 1):
+            for num3 in range(money // 3 + 1):
+                for num4 in range(money // 4 + 1):
+                    if 1 * num1 + 3 * num3 + 4 * num4 == money:
+                        min_coins = min(min_coins, num1 + num3 + num4)
+
+        return min_coins
+
+
+    def change(money):
+        type here
+
+
+    if __name__ == '__main__':
+        amount = int(input())
+        print(change(amount))
+  learner_created: false
+- name: money_change_again_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 318
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 318
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from money_change_again import change, change_naive
+
+
+    class MoneyChangeAgain(unittest.TestCase):
+        def test_small(self):
+            for money in range(1, 40):
+                self.assertEqual(change(money), change_naive(money))
+
+        def test_large(self):
+            for money, answer in ((200, 50), (239, 60), type here):
+                self.assertEqual(change(money), answer)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from money_change_again import change, change_naive
+    from random import randint
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("money_change_again_unit_tests.py")
+
+        all_tests_passed = True
+
+        for _ in range(20):
+            money = randint(1, 100)
+            if change_naive(money) != change(money):
+                all_tests_passed = False
+                failed("Wrong answer for money={}".format(money))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/ekN4T/programming-assignment-4-dynamic-programming/discussions
+status: Unchecked
+record: -1

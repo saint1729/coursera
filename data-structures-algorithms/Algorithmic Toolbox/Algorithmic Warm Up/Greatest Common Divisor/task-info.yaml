@@ -1,0 +1,104 @@
+type: edu
+files:
+- name: gcd.py
+  visible: true
+  placeholders:
+  - offset: 313
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 313
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def gcd_naive(a, b):
+        assert 1 <= a <= 2 * 10 ** 9 and 1 <= b <= 2 * 10 ** 9
+
+        for divisor in range(min(a, b), 0, -1):
+            if a % divisor == 0 and b % divisor == 0:
+                return divisor
+
+        assert False
+
+
+    def gcd(a, b):
+        assert 0 <= a <= 2 * 10 ** 9 and 0 <= b <= 2 * 10 ** 9
+
+        type here
+
+
+    if __name__ == '__main__':
+        input_a, input_b = map(int, input().split())
+        print(gcd(input_a, input_b))
+  learner_created: false
+- name: gcd_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 148
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 148
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  - offset: 298
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 298
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from gcd import gcd, gcd_naive
+
+
+    class TestGCD(unittest.TestCase):
+        def test_small(self):
+            for (a, b) in [(1, 1), (2, 6), type here]:
+                self.assertEqual(gcd(a, b), gcd_naive(a, b))
+
+        def test_large(self):
+            for (a, b, d) in [(28851538, 1183019, 17657), type here]:
+                self.assertEqual(gcd(a, b), d)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    import math
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from gcd import gcd
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("gcd_unit_tests.py")
+
+        all_tests_passed = True
+        for (a, b) in [(2, 3), (10**8, 10**5 - 1), (10**8, 10**9)]:
+            if gcd(a, b) != math.gcd(a, b):
+                all_tests_passed = False
+                failed("Wrong answer for a={}, b={}".format(a, b))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/b66y2/programming-assignment-1-introduction/discussions
+status: Unchecked
+record: -1

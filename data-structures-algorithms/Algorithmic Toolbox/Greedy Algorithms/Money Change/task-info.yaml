@@ -1,0 +1,85 @@
+type: edu
+files:
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: money_change.py
+  visible: true
+  placeholders:
+  - offset: 74
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 74
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def money_change(money):
+        assert 0 <= money <= 10 ** 3
+        type here
+
+
+    if __name__ == '__main__':
+        input_money = int(input())
+        print(money_change(input_money))
+  learner_created: false
+- name: money_change_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 187
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 187
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from money_change import money_change
+
+
+    class TestSumOfTwoDigits(unittest.TestCase):
+        def test(self):
+            for (money, number_of_coins) in [(1, 1), (2, 2), (28, 6), type here]:
+                self.assertEqual(money_change(money), number_of_coins)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from money_change import money_change
+
+
+    def reference(money):
+        assert 0 <= money <= 10 ** 3
+        return (money // 10) + ((money % 10) // 5) + (money % 5)
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("money_change_unit_tests.py")
+
+        all_tests_passed = True
+        for m in range(10 ** 3):
+            if money_change(m) != reference(m):
+                all_tests_passed = False
+                failed("Wrong answer for money={}".format(m))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/kAiGl/programming-assignment-2-greedy-algorithms/discussions
+status: Unchecked
+record: -1

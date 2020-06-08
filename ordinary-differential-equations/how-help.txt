@@ -1,0 +1,7 @@
+I have applied for MS in Applied Mathematics program (Fall 2020) and got an admit from Northeastern University. I want to complete a few courses in advance, before going to university as it can help to start from a point greater than zero once I go to university.
+
+I already completed the first three courses as part of the specialization "Mathematics for Data Science" and currently pursuing the last course "Probability Theory, Statistics and Exploratory Data Analysis" in this specialization. After that I would like to study the "Introduction to Ordinary Differential Equations" course offered by KAIST as this forms a good foundation for the course "Introduction to Mathematical Modeling" included in my academic curriculum.
+
+Machine Learning/Data Science has always been my area of interest. I completed Andrew Ng's "Machine Learning" course on Coursera, but couldn't get a chance to deploy it in a distributed environment. My long term goal is to end up as a Data Scientist or an ML Engineer at a leading technology company.
+
+This course would help me in understanding my academic concepts well and in turn help me achieve my long term career goal as a Data Scientist/Machine Learning Engineer.

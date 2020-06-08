@@ -1,0 +1,145 @@
+type: edu
+files:
+- name: binary_search_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 241
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 241
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  - offset: 520
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 520
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from binary_search import binary_search, linear_search
+
+
+    class TestBinarySearch(unittest.TestCase):
+        def test_small(self):
+            for (keys, query) in [
+                ([1, 2, 3], 1),
+                ([4, 5, 6], 7),
+                type here
+            ]:
+                self.assertEqual(
+                    linear_search(keys, query),
+                    binary_search(keys, query)
+                )
+
+        def test_large(self):
+            for (keys, query, answer) in [
+                (list(range(10 ** 4)), 10 ** 4, -1),
+                type here
+                (list(range(10 ** 4)), 239, 239),
+            ]:
+                self.assertEqual(binary_search(keys, query), answer)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from binary_search import binary_search
+    from random import randrange
+
+
+    def reference(keys, query):
+        assert all(keys[i] < keys[i + 1] for i in range(len(keys) - 1))
+        assert 1 <= len(keys) <= 10 ** 4
+
+        left, right = 0, len(keys)
+        while left + 1 < right:
+            ave = (left + right) // 2
+            if keys[ave] <= query:
+                left = ave
+            else:
+                right = ave
+        if keys[left] != query:
+            return -1
+        else:
+            return left
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("binary_search_unit_tests.py")
+
+        all_tests_passed = True
+        for _ in range(20):
+            keys = set()
+            for i in range(100):
+                x = randrange(239239) + 1
+                while x in keys:
+                    x = randrange(239239) + 1
+                keys.add(x)
+            keys = sorted(list(keys))
+
+            for key in keys:
+                for query in (key, key + 1):
+                    if binary_search(keys, query) != reference(keys, query):
+                        all_tests_passed = False
+                        failed("Wrong answer for keys={}, query={}".format(keys, query))
+                        break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+- name: binary_search.py
+  visible: true
+  placeholders:
+  - offset: 288
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 288
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def linear_search(keys, query):
+        for i in range(len(keys)):
+            if keys[i] == query:
+                return i
+
+        return -1
+
+
+    def binary_search(keys, query):
+        assert all(keys[i] < keys[i + 1] for i in range(len(keys) - 1))
+        assert 1 <= len(keys) <= 3 * 10 ** 4
+
+        type here
+
+
+    if __name__ == '__main__':
+        input_keys = list(map(int, input().split()))[1:]
+        input_queries = list(map(int, input().split()))[1:]
+
+        for q in input_queries:
+            print(binary_search(input_keys, q), end=' ')
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/w9YDz/programming-assignment-3-divide-and-conquer/discussions
+status: Unchecked
+record: -1

@@ -1,0 +1,105 @@
+type: edu
+files:
+- name: lcm.py
+  visible: true
+  placeholders:
+  - offset: 292
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 292
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def lcm_naive(a, b):
+        assert 1 <= a <= 2 * 10 ** 9 and 1 <= b <= 2 * 10 ** 9
+
+        multiple = max(a, b)
+        while multiple % a != 0 or multiple % b != 0:
+            multiple += 1
+
+        return multiple
+
+
+    def lcm(a, b):
+        assert 1 <= a <= 2 * 10 ** 9 and 1 <= b <= 2 * 10 ** 9
+
+        type here
+
+
+    if __name__ == '__main__':
+        input_a, input_b = map(int, input().split())
+        print(lcm(input_a, input_b))
+  learner_created: false
+- name: lcm_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 337
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 337
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from itertools import product
+    from lcm import lcm, lcm_naive
+
+
+    class TestLCM(unittest.TestCase):
+        def test_small(self):
+            for (a, b) in product(range(1, 15), repeat=2):
+                self.assertEqual(lcm(a, b), lcm_naive(a, b))
+
+        def test_large(self):
+            for (a, b, m) in [(28851538, 1183019, 1933053046), type here]:
+                self.assertEqual(lcm(a, b), m)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    import math
+    from random import randint
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from lcm import lcm
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("lcm_unit_tests.py")
+
+        all_tests_passed = True
+        for _ in range(10):
+            a, b = randint(1, 10 ** 18), randint(1, 10 ** 18)
+            if lcm(a, b) != a * b // math.gcd(a, b):
+                all_tests_passed = False
+                failed("Wrong answer for a={}, b={}".format(a, b))
+                break
+
+            c = randint(1, 10 ** 9)
+            a, b = randint(1, 10 ** 9) * c, randint(1, 10 ** 9) * c
+            if lcm(a, b) != a * b // math.gcd(a, b):
+                all_tests_passed = False
+                failed("Wrong answer for a={}, b={}".format(a, b))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/b66y2/programming-assignment-1-introduction/discussions
+status: Unchecked
+record: -1

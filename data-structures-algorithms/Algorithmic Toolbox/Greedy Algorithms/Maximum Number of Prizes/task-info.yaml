@@ -1,0 +1,103 @@
+type: edu
+files:
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: maximum_number_of_prizes.py
+  visible: true
+  placeholders:
+  - offset: 97
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 97
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+
+    def compute_optimal_summands(n):
+        assert 1 <= n <= 10 ** 9
+        summands = []
+
+        type here
+
+        return summands
+
+
+    if __name__ == '__main__':
+        input_n = int(input())
+        output_summands = compute_optimal_summands(input_n)
+        print(len(output_summands))
+        print(*output_summands)
+  learner_created: false
+- name: maximum_number_of_prizes_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 203
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 203
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from maximum_number_of_prizes import compute_optimal_summands
+
+
+    class MaximumNumberOfPrizes(unittest.TestCase):
+        def test(self):
+            for (n, answer) in [(1, 1), (6, 3), (100, 13), type here]:
+                summands = compute_optimal_summands(n)
+                self.assertEqual(len(summands), answer)
+                self.assertEqual(sum(summands), n)
+                summands = sorted(summands)
+                self.assertTrue(all(summands[i] < summands[i + 1] for i in range(len(summands) - 1)))
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from maximum_number_of_prizes import compute_optimal_summands
+
+
+    def reference(n):
+        summands = []
+
+        k = 1
+        while n >= k + k + 1:
+            summands.append(k)
+            n -= k
+            k += 1
+        summands.append(n)
+
+        return summands
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("maximum_number_of_prizes_unit_tests.py")
+
+        all_tests_passed = True
+        for n in [2, 7, 20, 239, 317]:
+            if reference(n) != compute_optimal_summands(n):
+                all_tests_passed = False
+                failed("Wrong answer for n={}".format(n))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/kAiGl/programming-assignment-2-greedy-algorithms/discussions
+status: Unchecked
+record: -1

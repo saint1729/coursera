@@ -1,0 +1,99 @@
+type: edu
+files:
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from maximum_gold import maximum_gold
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("maximum_gold_unit_tests.py")
+
+        all_tests_passed = True
+
+        for capacity, weights, answer in (
+                (10, (1, 4, 8), 9),
+                (20, (5, 7, 12, 18), 19),
+                (10, (3, 5, 3, 3, 5), 10),
+                (10, (3, 5, 3, 3, 5), 10),
+                (500, (342, 381, 230, 381, 206, 393, 364, 319, 279, 385, 345, 263, 365, 281, 298, 247, 239, 201, 378, 351), 499)
+        ):
+            if maximum_gold(capacity, weights) != answer:
+                all_tests_passed = False
+                failed("Wrong answer for capacity={}, weights={}".format(capacity, weights))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+- name: maximum_gold.py
+  visible: true
+  placeholders:
+  - offset: 204
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 204
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3
+
+    from sys import stdin
+
+
+    def maximum_gold(capacity, weights):
+        assert 1 <= capacity <= 10 ** 4
+        assert 1 <= len(weights) <= 10 ** 3
+        assert all(1 <= w <= 10 ** 5 for w in weights)
+
+        type here
+
+
+    if __name__ == '__main__':
+        input_capacity, n, *input_weights = list(map(int, stdin.read().split()))
+        assert len(input_weights) == n
+
+        print(maximum_gold(input_capacity, input_weights))
+  learner_created: false
+- name: maximum_gold_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 278
+    length: 9
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 278
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    import unittest
+    from maximum_gold import maximum_gold
+
+
+    class MaximumGold(unittest.TestCase):
+        def test(self):
+            for capacity, weights, answer in (
+                (10, (1, 4, 8), 9),
+                (20, (5, 7, 12, 18), 19),
+                (10, (3, 5, 3, 3, 5), 10),
+                type here
+            ):
+                self.assertEqual(maximum_gold(capacity, weights), answer)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/ekN4T/programming-assignment-4-dynamic-programming/discussions
+status: Unchecked
+record: -1

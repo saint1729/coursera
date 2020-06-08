@@ -1,0 +1,5 @@
+I have applied for MS in Applied Mathematics program (Fall 2020) and got an admit from Northeastern University. I want to complete a few courses in advance, before going to university as it can help to start from a point greater than zero once I go to university.
+
+I recently completed the "Mathematics for Data Science" specialization and the "Introduction to Ordinary Differential Equations" course. I am now starting the "Data Structures and Algorithm" specialization which will be helpful for coding interview preparations. This application is for financial aid for the second course "Data Structures" in this specialization.
+
+My long term goal is to end up as an ML Engineer at a leading technology company. This specialization will help me in gaining good knowledge in Data Structure and Algorithm implementation that will be helpful to tackle challenging interview rounds at leading tech companies and help me land in my dream job.

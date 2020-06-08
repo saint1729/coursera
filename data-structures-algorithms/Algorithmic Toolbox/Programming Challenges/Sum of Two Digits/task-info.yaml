@@ -1,0 +1,71 @@
+type: edu
+files:
+- name: logo.png
+  visible: false
+  learner_created: false
+- name: sum_of_two_digits_unit_tests.py
+  visible: true
+  text: |
+    import unittest
+    from itertools import product
+    from sum_of_two_digits import sum_of_two_digits
+
+
+    class TestSumOfTwoDigits(unittest.TestCase):
+        def test_all_inputs(self):
+            for first_digit, second_digit in product(range(10), repeat=2):
+                self.assertEqual(sum_of_two_digits(first_digit, second_digit), first_digit + second_digit)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |
+    from test_helper import run_common_tests, failed, passed, check_tests_pass
+    from itertools import product
+    from sum_of_two_digits import sum_of_two_digits
+
+    if __name__ == '__main__':
+        run_common_tests()
+        check_tests_pass("sum_of_two_digits_unit_tests.py")
+
+        all_tests_passed = True
+        for a, b in product(range(10), repeat=2):
+            if sum_of_two_digits(a, b) != a + b:
+                all_tests_passed = False
+                failed("Wrong answer for a={}, b={}".format(a, b))
+                break
+
+        if all_tests_passed:
+            passed()
+  learner_created: false
+- name: sum_of_two_digits.py
+  visible: true
+  placeholders:
+  - offset: 220
+    length: 26
+    placeholder_text: write your code here
+    initial_state:
+      length: 20
+      offset: 220
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+  text: |
+    # python3 (this comment tells the grading system at Coursera to use python3 rather than python3)
+
+
+    def sum_of_two_digits(first_digit, second_digit):
+        assert 0 <= first_digit <= 9 and 0 <= second_digit <= 9
+        return write your code here
+
+
+    if __name__ == '__main__':
+        a, b = map(int, input().split())
+        print(sum_of_two_digits(a, b))
+  learner_created: false
+feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/ZtG0y/a-plus-b/discussions
+status: Unchecked
+record: -1
