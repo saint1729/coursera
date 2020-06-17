@@ -17,7 +17,21 @@ def max_pairwise_product_naive(numbers):
 def max_pairwise_product(numbers):
     assert len(numbers) >= 2
     assert all(0 <= x <= 2 * 10 ** 5 for x in numbers)
-    type here
+
+    max1 = 0
+    max1_index = -1
+    max2 = 0
+
+    for i in range(len(numbers)):
+        if max1 < numbers[i]:
+            max1 = numbers[i]
+            max1_index = i
+
+    for i in range(len(numbers)):
+        if (max2 <= max1) and (max2 <= numbers[i]) and (i != max1_index):
+            max2 = numbers[i]
+
+    return max1 * max2
 
 
 if __name__ == '__main__':

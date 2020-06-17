@@ -6,14 +6,14 @@ files:
 - name: maximum_pairwise_product.py
   visible: true
   placeholders:
-  - offset: 439
-    length: 9
+  - offset: 436
+    length: 330
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 439
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     # python3
@@ -47,14 +47,14 @@ files:
 - name: maximum_pairwise_product_unit_tests.py
   visible: true
   placeholders:
-  - offset: 401
-    length: 9
+  - offset: 393
+    length: 70
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 401
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     import unittest

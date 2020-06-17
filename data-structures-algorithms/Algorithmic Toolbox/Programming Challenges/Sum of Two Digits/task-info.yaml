@@ -51,7 +51,7 @@ files:
       length: 20
       offset: 220
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     # python3 (this comment tells the grading system at Coursera to use python3 rather than python3)
