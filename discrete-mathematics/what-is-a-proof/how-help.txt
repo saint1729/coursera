@@ -1,0 +1,5 @@
+I have applied for MS in Applied Mathematics program (Fall 2020) and got an admit from Northeastern University. I want to complete a few courses in advance, before going to university as it can help to start from a point greater than zero once I go to university.
+
+I recently completed the specialization "Mathematics for Data Science". I am currently doing the "Data Structures and Algorithm" specialization which will be helpful for coding interview preparations. I am also interested in the "Introduction to Discrete Mathematics for Computer Science Specialization" offered by the same partners (UCSD, NRU HSE). This application is for financial aid for the first course "Mathematical Thinking in Computer Science" in this specialization.
+
+My long term goal is to end up as a Data Scientist or an ML Engineer at a leading technology company. This specialization will help me in gaining good knowledge in Discrete Mathematics that will be helpful to understand the advanced concepts in Machine Learning, as I believe that Machine Learning is a subject that is formed at the intersection of Applied Mathematics and Programming.
