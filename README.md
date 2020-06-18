@@ -52,5 +52,6 @@ This repository contains my coursework for various courses/specializations I com
 
 
 ## Specialization: Full Stack Web Development
-1. Course: HTML, CSS and JavaScript (Audited)
-2. Course: Front-End Web UI Frameworks and Tools (Audited)
+### Courses:
+1. HTML, CSS and JavaScript (Audited)
+2. Front-End Web UI Frameworks and Tools (Audited)
