@@ -8,7 +8,7 @@ class TestFibonacciNumber(unittest.TestCase):
             self.assertEqual(fibonacci_number(n), fibonacci_number_naive(n))
 
     def test_large(self):
-        for (n, Fn) in [(30, 832040), (35, type here), (40, 102334155)]:
+        for (n, Fn) in [(30, 832040), (35, 9227465), (40, 102334155)]:
             self.assertEqual(fibonacci_number(n), Fn)
 
 

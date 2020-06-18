@@ -9,7 +9,7 @@ class TestLastDigitOfFibonacciNumber(unittest.TestCase):
                              last_digit_of_fibonacci_number(n))
 
     def test_large(self):
-        for (n, last_digit) in [(100, 5), (139, 1), (91239, 6), type here]:
+        for (n, last_digit) in [(100, 5), (139, 1), (91239, 6), (2, 1)]:
             self.assertEqual(last_digit_of_fibonacci_number(n), last_digit)
 
 

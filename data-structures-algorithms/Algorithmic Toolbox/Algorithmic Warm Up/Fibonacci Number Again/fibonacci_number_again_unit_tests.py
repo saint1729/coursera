@@ -9,7 +9,7 @@ class TestFibonacciNumberAgain(unittest.TestCase):
             self.assertEqual(fibonacci_number_again(n, m), fibonacci_number_again_naive(n, m))
 
     def test_large(self):
-        for (n, m, r) in [(115, 1000, 885), (2816213588, 239, 151), type here]:
+        for (n, m, r) in [(115, 1000, 885), (2816213588, 239, 151), (2015, 3, 1)]:
             self.assertEqual(fibonacci_number_again(n, m), r)
 
 

@@ -14,7 +14,7 @@ class TestLastDigitOfTheSumOfFibonacciNumbersAgain(unittest.TestCase):
         for (from_index, to_index, last_digit) in [(3, 7, 1), (10, 10, 5), (100, 200, 0),
                                                    (17, 1700, 7),
                                                    (19, 10000000000, 1),
-                                                   type here]:
+                                                   (0, 4, 7)]:
             self.assertEqual(last_digit_of_the_sum_of_fibonacci_numbers_again(from_index, to_index), last_digit)
 
 

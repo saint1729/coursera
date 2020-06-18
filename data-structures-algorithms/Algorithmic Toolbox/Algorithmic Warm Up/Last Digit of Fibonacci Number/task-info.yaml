@@ -3,14 +3,14 @@ files:
 - name: last_digit_of_fibonacci_number.py
   visible: true
   placeholders:
-  - offset: 303
-    length: 9
+  - offset: 299
+    length: 132
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 303
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     # python3
@@ -38,14 +38,14 @@ files:
 - name: last_digit_of_fibonacci_number_unit_tests.py
   visible: true
   placeholders:
-  - offset: 466
-    length: 9
+  - offset: 402
+    length: 73
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 466
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     import unittest
