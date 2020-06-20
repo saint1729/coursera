@@ -6,14 +6,14 @@ files:
 - name: money_change.py
   visible: true
   placeholders:
-  - offset: 74
-    length: 9
+  - offset: 71
+    length: 100
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 74
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     # python3
@@ -32,7 +32,7 @@ files:
   visible: true
   placeholders:
   - offset: 187
-    length: 9
+    length: 7
     placeholder_text: type here
     initial_state:
       length: 9

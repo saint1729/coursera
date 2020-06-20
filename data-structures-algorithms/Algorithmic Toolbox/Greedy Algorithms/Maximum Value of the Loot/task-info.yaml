@@ -6,14 +6,14 @@ files:
 - name: maximum_loot.py
   visible: true
   placeholders:
-  - offset: 318
-    length: 9
+  - offset: 314
+    length: 381
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 318
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     # python3
@@ -42,14 +42,14 @@ files:
 - name: maximum_loot_unit_tests.py
   visible: true
   placeholders:
-  - offset: 282
-    length: 9
+  - offset: 270
+    length: 54
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 282
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     import unittest

@@ -1,6 +1,7 @@
 # python3
 
 from itertools import permutations
+import functools
 
 
 def largest_number_naive(numbers):
@@ -14,8 +15,16 @@ def largest_number_naive(numbers):
     return largest
 
 
+def compare_numbers(a, b):
+    ab = a + b
+    ba = b + a
+    return int(ba) - int(ab)
+
+
 def largest_number(numbers):
-    type here
+    numbers = map(str, numbers)
+    numbers = sorted(numbers, key=functools.cmp_to_key(compare_numbers))
+    return int("".join(numbers))
 
 
 if __name__ == '__main__':

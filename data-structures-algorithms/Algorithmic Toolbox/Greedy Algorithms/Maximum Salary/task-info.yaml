@@ -6,8 +6,8 @@ files:
 - name: maximum_salary_unit_tests.py
   visible: true
   placeholders:
-  - offset: 253
-    length: 9
+  - offset: 241
+    length: 20
     placeholder_text: type here
     initial_state:
       length: 9
@@ -87,14 +87,14 @@ files:
 - name: maximum_salary.py
   visible: true
   placeholders:
-  - offset: 298
-    length: 9
+  - offset: 431
+    length: 105
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 298
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     # python3

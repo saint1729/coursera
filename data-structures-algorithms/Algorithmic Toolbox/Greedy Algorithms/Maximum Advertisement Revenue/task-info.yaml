@@ -6,14 +6,14 @@ files:
 - name: maximum_ad_revenue.py
   visible: true
   placeholders:
-  - offset: 846
-    length: 9
+  - offset: 842
+    length: 145
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 846
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     # python3
@@ -54,8 +54,8 @@ files:
 - name: maximum_ad_revenue_unit_tests.py
   visible: true
   placeholders:
-  - offset: 443
-    length: 9
+  - offset: 431
+    length: 38
     placeholder_text: type here
     initial_state:
       length: 9
@@ -63,14 +63,14 @@ files:
     initialized_from_dependency: false
     selected: false
     status: Unchecked
-  - offset: 838
-    length: 9
+  - offset: 847
+    length: 62
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 838
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     import unittest

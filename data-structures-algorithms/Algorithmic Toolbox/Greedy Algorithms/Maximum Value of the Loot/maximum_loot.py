@@ -10,7 +10,18 @@ def maximum_loot_value(capacity, weights, prices):
     assert all(0 < w <= 2 * 10 ** 6 for w in weights)
     assert all(0 <= p <= 2 * 10 ** 6 for p in prices)
 
-    type here
+    combined = sorted(zip([float(price) / weight for weight, price in zip(weights, prices)],
+                          weights, prices), key=lambda x: -x[0])
+
+    ans = 0
+
+    i, size = 0, len(combined)
+    while (capacity > 0) and (i < size):
+        ans += (combined[i][2] * min(capacity / combined[i][1], 1.0))
+        capacity -= combined[i][1]
+        i += 1
+
+    return ans
 
 
 if __name__ == "__main__":

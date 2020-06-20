@@ -7,8 +7,7 @@ class TestMaximumLoot(unittest.TestCase):
         for (capacity, weights, prices, answer) in [
             (50, [20, 50, 30], [60, 100, 120], 180.0),
             (10, [30], [500], 500/3),
-            type here
-        ]:
+            (120, [20, 50, 30], [60, 100, 120], 280.0)]:
             self.assertAlmostEqual(
                 maximum_loot_value(capacity, weights, prices),
                 answer,
