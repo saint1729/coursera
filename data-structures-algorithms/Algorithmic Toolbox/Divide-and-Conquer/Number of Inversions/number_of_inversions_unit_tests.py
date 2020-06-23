@@ -8,21 +8,23 @@ class TestNumberOfInversions(unittest.TestCase):
         for array in [
             ([1, 2, 3]),
             ([3, 2, 1]),
-            type here
+            ([3, 2, 1])
         ]:
-            self.assertEqual(compute_inversions(array),
-                             compute_inversions_naive(array))
+            left = compute_inversions_naive(array)
+            right = compute_inversions(array)
+            self.assertEqual(left, right)
 
     def test_random(self):
         for n in (10, 100):
             for max_value in (1, 2, 10, 10 ** 5):
                 array = [randint(0, max_value) for _ in range(n)]
-                self.assertEqual(compute_inversions(array),
-                                 compute_inversions_naive(array))
+                left = compute_inversions_naive(array)
+                right = compute_inversions(array)
+                self.assertEqual(left, right)
 
     def test_large(self):
         self.assertEqual(compute_inversions([1] * 100), 0)
-        type here
+        self.assertEqual(compute_inversions([1] * 100), 0)
 
 if __name__ == '__main__':
     unittest.main()

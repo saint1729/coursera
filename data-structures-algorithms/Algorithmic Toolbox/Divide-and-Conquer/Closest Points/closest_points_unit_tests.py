@@ -7,10 +7,12 @@ class ClosestPoints(unittest.TestCase):
     def test_small(self):
         for points in (
             [Point(1, 0), Point(1, 1)],
-            type here
+            [Point(-1, -3), Point(0, 0), Point(-3, 1), Point(1, -3), Point(-1, 3)]
         ):
-            self.assertAlmostEqual(minimum_distance_squared(points),
-                                   minimum_distance_squared_naive(points),
+            actual_answer = minimum_distance_squared(points)
+            expected_answer = minimum_distance_squared_naive(points)
+            self.assertAlmostEqual(actual_answer,
+                                   expected_answer,
                                    delta=1e-03)
 
     def test_random(self):
@@ -21,13 +23,15 @@ class ClosestPoints(unittest.TestCase):
                     x = randint(-max_value, max_value)
                     y = randint(-max_value, max_value)
                     points.append(Point(x, y))
-
-                self.assertAlmostEqual(minimum_distance_squared(points),
-                                       minimum_distance_squared_naive(points),
+                points2 = points[:]
+                actual_value = minimum_distance_squared(points)
+                expected_value = minimum_distance_squared_naive(points)
+                self.assertAlmostEqual(actual_value,
+                                       expected_value,
                                        delta=1e-03)
 
     def test_large(self):
-        type here
+        self.test_small()
 
 
 if __name__ == '__main__':

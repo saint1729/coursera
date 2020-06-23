@@ -3,14 +3,14 @@ files:
 - name: closest_points.py
   visible: true
   placeholders:
-  - offset: 600
-    length: 9
+  - offset: 2060
+    length: 188
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 600
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     # python3
@@ -53,17 +53,17 @@ files:
 - name: closest_points_unit_tests.py
   visible: true
   placeholders:
-  - offset: 278
-    length: 9
+  - offset: 266
+    length: 82
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 278
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
-  - offset: 1059
-    length: 9
+  - offset: 1335
+    length: 17
     placeholder_text: type here
     initial_state:
       length: 9

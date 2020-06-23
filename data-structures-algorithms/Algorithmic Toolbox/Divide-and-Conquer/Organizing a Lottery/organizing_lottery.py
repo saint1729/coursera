@@ -16,7 +16,32 @@ def points_cover_naive(starts, ends, points):
 
 
 def points_cover(starts, ends, points):
-    type here
+    left = list(zip(starts, [0] * len(starts)))
+    mid = list(zip(points, [1] * len(points)))
+    right = list(zip(ends, [2] * len(ends)))
+
+    count = [0] * len(points)
+
+    dots = left + mid + right
+
+    dots = sorted(dots, key=lambda x: x[1])
+    dots = sorted(dots, key=lambda x: x[0])
+
+    intervals = 0
+    counts = dict(zip(points, [0] * len(points)))
+    for dot in dots:
+        if dot[1] == 0:
+            intervals += 1
+        elif dot[1] == 2:
+            intervals -= 1
+        else:
+            counts[dot[0]] = intervals
+
+    for index, point in enumerate(points):
+        count[index] = counts[point]
+
+
+    return count
 
 
 if __name__ == '__main__':

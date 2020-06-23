@@ -3,17 +3,17 @@ files:
 - name: binary_search_unit_tests.py
   visible: true
   placeholders:
-  - offset: 241
-    length: 9
+  - offset: 229
+    length: 26
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 241
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
-  - offset: 520
-    length: 9
+  - offset: 513
+    length: 48
     placeholder_text: type here
     initial_state:
       length: 9
@@ -105,14 +105,14 @@ files:
 - name: binary_search.py
   visible: true
   placeholders:
-  - offset: 288
-    length: 9
+  - offset: 622
+    length: 60
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 288
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     # python3

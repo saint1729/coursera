@@ -6,8 +6,8 @@ files:
 - name: number_of_inversions_unit_tests.py
   visible: true
   placeholders:
-  - offset: 283
-    length: 9
+  - offset: 271
+    length: 23
     placeholder_text: type here
     initial_state:
       length: 9
@@ -15,8 +15,8 @@ files:
     initialized_from_dependency: false
     selected: false
     status: Unchecked
-  - offset: 814
-    length: 9
+  - offset: 854
+    length: 58
     placeholder_text: type here
     initial_state:
       length: 9
@@ -85,8 +85,8 @@ files:
 - name: number_of_inversions.py
   visible: true
   placeholders:
-  - offset: 285
-    length: 9
+  - offset: 1285
+    length: 62
     placeholder_text: type here
     initial_state:
       length: 9

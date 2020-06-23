@@ -3,14 +3,14 @@ files:
 - name: quicksort_unit_tests.py
   visible: true
   placeholders:
-  - offset: 240
-    length: 9
+  - offset: 232
+    length: 44
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 240
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     import unittest
@@ -74,24 +74,24 @@ files:
 - name: quicksort.py
   visible: true
   placeholders:
-  - offset: 80
-    length: 9
+  - offset: 96
+    length: 425
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 80
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
-  - offset: 259
-    length: 80
+  - offset: 687
+    length: 231
     placeholder_text: "make a call to partition3 and then two recursive calls \nto\
       \ randomized_quick_sort"
     initial_state:
       length: 80
       offset: 259
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: "# python3\n\nfrom random import randint\n\n\ndef partition3(array, left,\
     \ right):\n    type here\n\n\ndef randomized_quick_sort(array, left, right):\n\

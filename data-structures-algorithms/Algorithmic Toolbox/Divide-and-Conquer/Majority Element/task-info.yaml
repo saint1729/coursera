@@ -6,14 +6,14 @@ files:
 - name: majority_element.py
   visible: true
   placeholders:
-  - offset: 268
-    length: 9
+  - offset: 883
+    length: 139
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 268
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     # python3
@@ -42,8 +42,8 @@ files:
 - name: majority_element_unit_tests.py
   visible: true
   placeholders:
-  - offset: 296
-    length: 9
+  - offset: 284
+    length: 24
     placeholder_text: type here
     initial_state:
       length: 9
