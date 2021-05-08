@@ -10,20 +10,31 @@ class Database:
         self.parents = list(range(n_tables))
 
     def merge(self, src, dst):
-        src_parent = self.get_parent(src)
-        dst_parent = self.get_parent(dst)
+        src_parent = self.find(src)
+        dst_parent = self.find(dst)
 
         if src_parent == dst_parent:
             return False
 
-        # merge two components
-        # use union by rank heuristic
-        # update max_row_count with the new maximum table size
+        if self.ranks[src_parent] > self.ranks[dst_parent]:
+            self.parents[dst_parent] = src_parent
+            self.row_counts[src_parent] += self.row_counts[dst_parent]
+            if self.row_counts[src_parent] > self.max_row_count:
+                self.max_row_count = self.row_counts[src_parent]
+        else:
+            self.parents[src_parent] = dst_parent
+            self.row_counts[dst_parent] += self.row_counts[src_parent]
+            if self.row_counts[dst_parent] > self.max_row_count:
+                self.max_row_count = self.row_counts[dst_parent]
+            if self.ranks[src_parent] == self.ranks[dst_parent]:
+                self.ranks[dst_parent] += 1
+
         return True
 
-    def get_parent(self, table):
-        # find parent and compress path
-        return self.parents[table]
+    def find(self, i):
+        if i != self.parents[i]:
+            self.parents[i] = self.find(self.parents[i])
+        return self.parents[i]
 
 
 def main():
@@ -34,6 +45,7 @@ def main():
     for i in range(n_queries):
         dst, src = map(int, input().split())
         db.merge(dst - 1, src - 1)
+        # print(db.row_counts)
         print(db.max_row_count)
 
 
