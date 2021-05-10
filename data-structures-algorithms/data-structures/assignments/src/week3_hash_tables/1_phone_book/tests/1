@@ -1,0 +1,9 @@
+8
+find 3839442
+add 123456 me
+add 0 granny
+find 0
+find 123456
+del 0
+del 0
+find 0
