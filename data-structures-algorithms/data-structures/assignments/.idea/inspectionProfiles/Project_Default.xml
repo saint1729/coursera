@@ -18,6 +18,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="list.pop" />
+          <option value="list.add_child" />
         </list>
       </option>
     </inspection_tool>
