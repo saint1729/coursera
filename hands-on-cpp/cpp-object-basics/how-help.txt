@@ -1,0 +1,7 @@
+I am currently pursuing an MS in Applied Mathematics program (Fall 2020) at Northeastern University. I want to complete a few courses in summer break so that they can help me in cracking tough technical interviews, once I complete the education.
+
+I already completed the courses "Machine Learning" (Andrew Ng), "Algorithmic Toolbox", and a specialization, "Mathematics for Data Science" which contains 4 courses, 3 courses in Deep Learning specialization. This application is for financial aid for the course "C++ Object Basics: Functions, Recursion, and Objects".
+
+My long-term goal is to end up as a Data Scientist or an ML Engineer at a leading tech/finance company. This course looks like the right choice as it helps me in learning C++ concepts which is a core technology backing the Machine Learning field at many big tech companies such as NVIDIA.
+
+Machine Learning/Data Science is my new area of interest. I completed Andrew Ng's "Machine Learning" course on Coursera, but couldn't get a chance to deploy it in a distributed environment. This course can also help me cover the basics of C++ before I can start the implementation of the Machine Learning Algorithms in C++ after I land at my dream company.
