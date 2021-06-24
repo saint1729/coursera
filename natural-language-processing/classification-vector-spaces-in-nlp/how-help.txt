@@ -1,0 +1,7 @@
+I am currently pursuing an MS in Applied Mathematics program (Fall 2020) at Northeastern University. I want to complete a few courses in spring/summer break so that they can help me in cracking tough technical interviews, once I complete the education.
+
+I already completed the courses "Machine Learning" (Andrew Ng), "Algorithmic Toolbox", and a specialization, "Mathematics for Data Science" which contains 4 courses. This application is for financial aid for the course "Natural Language Processing with Classification and Vector Spaces" as part of the "Natural Language Processing" specialization.
+
+My long-term goal is to end up as an ML Engineer at a leading tech/finance company. This course helps me in gaining good knowledge in providing details about how to work with text data using Classification and vector spaces.
+
+Machine Learning/Data Science is my new area of interest. I completed Andrew Ng's "Machine Learning" course on Coursera, but couldn't get a chance to deploy it in a distributed environment. This course can also help me cover the core required before I can start the implementation of these techniques after I land at my dream company.
