@@ -6,3 +6,5 @@ deep-learning/.DS_Store
 data-structures-algorithms/Algorithmic Toolbox/.DS_Store
 data-structures-algorithms/.DS_Store
 intro-to-numerical-analysis/.DS_Store
+tensorflow2-deeplearning/getting-started-with-tensor-flow2/week5/data/test_32x32.mat
+tensorflow2-deeplearning/getting-started-with-tensor-flow2/week5/data/train_32x32.mat
